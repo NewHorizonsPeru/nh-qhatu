@@ -35,7 +35,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.domain.core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.application.core", "nh.qhatu.common.application.core\nh.qhatu.common.application.core.csproj", "{F58D0BDE-7A64-4F66-B546-C22118E226F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.common.infrastructure.data", "nh.qhatu.common.infrastructure.data\nh.qhatu.common.infrastructure.data.csproj", "{FFA3092C-0E7F-4B98-A907-5A5030C41742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.infrastructure.data", "nh.qhatu.common.infrastructure.data\nh.qhatu.common.infrastructure.data.csproj", "{FFA3092C-0E7F-4B98-A907-5A5030C41742}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home Delivery", "Home Delivery", "{02981118-5113-4A5C-B0F0-B52D81533B35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{664D209B-A7A2-47D2-BB4C-3B6F0CB833BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Omnichannel", "Omnichannel", "{1C543440-5AEF-46FD-B590-618E4FEAF4BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6C4D2E98-46DC-4A8C-9A11-183630233F0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{EDB0EA45-874E-413C-AB9B-16EBB52DCFDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BEC94A6D-EE0E-486E-96AA-DE0288CD6925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8D1D6880-05E2-4D91-8FCB-9172500DCCB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.customer.domain.core", "nh.qhatu.customer.domain.core\nh.qhatu.customer.domain.core.csproj", "{149CD76E-9DD5-47CA-8103-53AB753BE6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.customer.infrastructure.data", "nh.qhatu.customer.infrastructure.data\nh.qhatu.customer.infrastructure.data.csproj", "{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.customer.application.core", "nh.qhatu.customer.application.core\nh.qhatu.customer.application.core.csproj", "{816E759F-2F48-41ED-9666-7E982C867050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.customer.presentation.api", "nh.qhatu.customer.presentation.api\nh.qhatu.customer.presentation.api.csproj", "{26E10E9A-4BA7-4255-A5E1-40BBF830F714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +93,22 @@ Global
 		{FFA3092C-0E7F-4B98-A907-5A5030C41742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFA3092C-0E7F-4B98-A907-5A5030C41742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFA3092C-0E7F-4B98-A907-5A5030C41742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149CD76E-9DD5-47CA-8103-53AB753BE6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149CD76E-9DD5-47CA-8103-53AB753BE6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149CD76E-9DD5-47CA-8103-53AB753BE6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149CD76E-9DD5-47CA-8103-53AB753BE6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{816E759F-2F48-41ED-9666-7E982C867050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816E759F-2F48-41ED-9666-7E982C867050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816E759F-2F48-41ED-9666-7E982C867050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816E759F-2F48-41ED-9666-7E982C867050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E10E9A-4BA7-4255-A5E1-40BBF830F714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E10E9A-4BA7-4255-A5E1-40BBF830F714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E10E9A-4BA7-4255-A5E1-40BBF830F714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E10E9A-4BA7-4255-A5E1-40BBF830F714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +128,17 @@ Global
 		{760E9117-69EF-43F8-ACCF-69F54DE6D760} = {FD8F8438-1AA3-46D6-9791-4E8ED168AEBC}
 		{F58D0BDE-7A64-4F66-B546-C22118E226F6} = {9F77991A-B0B2-4CFB-B7D3-FA7839842F81}
 		{FFA3092C-0E7F-4B98-A907-5A5030C41742} = {DD6D76AC-F3E1-482B-B26D-16DF7F3AFE2F}
+		{02981118-5113-4A5C-B0F0-B52D81533B35} = {2D37710E-4C5B-4C74-A3E7-BF9FE1D6C4D2}
+		{664D209B-A7A2-47D2-BB4C-3B6F0CB833BE} = {2D37710E-4C5B-4C74-A3E7-BF9FE1D6C4D2}
+		{1C543440-5AEF-46FD-B590-618E4FEAF4BF} = {2D37710E-4C5B-4C74-A3E7-BF9FE1D6C4D2}
+		{6C4D2E98-46DC-4A8C-9A11-183630233F0A} = {664D209B-A7A2-47D2-BB4C-3B6F0CB833BE}
+		{EDB0EA45-874E-413C-AB9B-16EBB52DCFDE} = {664D209B-A7A2-47D2-BB4C-3B6F0CB833BE}
+		{BEC94A6D-EE0E-486E-96AA-DE0288CD6925} = {664D209B-A7A2-47D2-BB4C-3B6F0CB833BE}
+		{8D1D6880-05E2-4D91-8FCB-9172500DCCB8} = {664D209B-A7A2-47D2-BB4C-3B6F0CB833BE}
+		{149CD76E-9DD5-47CA-8103-53AB753BE6A5} = {BEC94A6D-EE0E-486E-96AA-DE0288CD6925}
+		{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6} = {EDB0EA45-874E-413C-AB9B-16EBB52DCFDE}
+		{816E759F-2F48-41ED-9666-7E982C867050} = {8D1D6880-05E2-4D91-8FCB-9172500DCCB8}
+		{26E10E9A-4BA7-4255-A5E1-40BBF830F714} = {6C4D2E98-46DC-4A8C-9A11-183630233F0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09F10172-4652-4676-B5D2-4AAB870B26C6}

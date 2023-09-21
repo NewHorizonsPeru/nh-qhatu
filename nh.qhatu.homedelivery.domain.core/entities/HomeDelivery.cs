@@ -1,6 +1,7 @@
 ﻿namespace nh.qhatu.homedelivery.domain.core.entities
 {
-    public partial class HomeDelivery
+
+    public class HomeDelivery
     {
         public int Id { get; set; }
         public int OrderId { get; set; }

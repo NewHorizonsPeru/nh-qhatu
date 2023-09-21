@@ -20,7 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //AutoMapper
-builder.Services.AddAutoMapper(typeof(EntityToDtoProfile));
+builder.Services.AddAutoMapper(typeof(EntityToDtoProfile), typeof(DtoToEntityProfile));
 
 //SQL Server
 builder.Services.AddDbContext<QhatuContext>(config =>

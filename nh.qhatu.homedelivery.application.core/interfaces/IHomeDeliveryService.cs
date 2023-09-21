@@ -5,5 +5,6 @@ namespace nh.qhatu.homedelivery.application.core.interfaces
     public interface IHomeDeliveryService
     {
         ICollection<HomeDeliveryDto> GetAllHomeDeliveries();
+        HomeDeliveryDto CreateHomeDelivery(HomeDeliveryDto homeDeliveryDto);
     }
 }

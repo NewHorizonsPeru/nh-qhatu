@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using nh.qhatu.homedelivery.application.core.dto;
 using nh.qhatu.homedelivery.application.core.interfaces;
 
 namespace nh.qhatu.homedelivery.presentation.api.Controllers
@@ -18,6 +19,12 @@ namespace nh.qhatu.homedelivery.presentation.api.Controllers
         public IActionResult GetAllHomeDeliveries()
         {
             return Ok(_homeDeliveryService.GetAllHomeDeliveries());
+        }
+
+        [HttpPost]
+        public IActionResult CreateHomeDelivery([FromBody] HomeDeliveryDto homeDeliveryDto)
+        {
+            return Ok(_homeDeliveryService.CreateHomeDelivery(homeDeliveryDto));
         }
     }
 }

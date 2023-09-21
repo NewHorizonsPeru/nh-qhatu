@@ -10,6 +10,6 @@ namespace nh.qhatu.homedelivery.infrastructure.data.context
         {
         }
 
-        public virtual DbSet<HomeDelivery> Addresses { get; set; } = null!;
+        public virtual DbSet<HomeDelivery> HomeDelivery { get; set; } = null!;
     }
 }

@@ -12,6 +12,8 @@ namespace nh.qhatu.customer.infrastructure.data.configurations.entityTypes
 
             builder.Property(e => e.Id).HasColumnName("id");
 
+            builder.HasKey(c => c.Id);
+
             builder.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
@@ -19,14 +21,9 @@ namespace nh.qhatu.customer.infrastructure.data.configurations.entityTypes
             builder.Property(e => e.CustomerId).HasColumnName("customer_id");
 
             builder.Property(e => e.Description)
-                .HasMaxLength(500)
+                .HasMaxLength(1000)
                 .IsUnicode(false)
                 .HasColumnName("description");
-
-            builder.HasOne(d => d.Customer)
-                .WithMany(p => p.Addresses)
-                .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK_address_customer");
         }
     }
 }

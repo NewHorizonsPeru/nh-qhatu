@@ -2,8 +2,8 @@
 {
     public partial class AddressDto
     {
-        public int Id { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public int CustomerId { get; set; } 
+        public string Id { get; set; } = null!;
+        public string Description { get; set; } = null!;
+        public string CustomerId { get; set; } = null!;
     }
 }

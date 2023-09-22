@@ -24,40 +24,38 @@ namespace nh.qhatu.homedelivery.infrastructure.data.Migrations
 
             modelBuilder.Entity("nh.qhatu.homedelivery.domain.core.entities.HomeDelivery", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                    b.Property<string>("Id")
+                        .HasColumnType("text")
+                        .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Address")
+                    b.Property<string>("AddressId")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(1000)
+                        .IsUnicode(false)
+                        .HasColumnType("character varying(1000)")
+                        .HasColumnName("address_id");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp")
+                        .HasColumnName("created_at");
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("integer");
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("customer_id");
 
-                    b.Property<int>("Departament")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("District")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Province")
-                        .HasColumnType("integer");
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("order_id");
 
                     b.Property<int>("State")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("state");
 
                     b.HasKey("Id");
 
-                    b.ToTable("HomeDelivery");
+                    b.ToTable("home_delivery", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -12,6 +12,8 @@ namespace nh.qhatu.common.infrastructure.data.configurations.entityTypes
 
             builder.Property(e => e.Id).HasColumnName("id");
 
+            builder.HasKey(c => c.Id);
+
             builder.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");

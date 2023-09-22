@@ -14,5 +14,6 @@
 	  <ProjectReference Include="..\nh.qhatu.common.infrastructure.data\nh.qhatu.common.infrastructure.data.csproj" />
 	  <ProjectReference Include="..\nh.qhatu.customer.infrastructure.data\nh.qhatu.customer.infrastructure.data.csproj" />
 	  <ProjectReference Include="..\nh.qhatu.infrastructure.bus\nh.qhatu.infrastructure.bus.csproj" />
+	  <ProjectReference Include="..\nh.qhatu.omnichannel.infrastructure.data\nh.qhatu.omnichannel.infrastructure.data.csproj" />
 	</ItemGroup>
 </Project>

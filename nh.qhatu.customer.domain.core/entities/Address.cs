@@ -2,10 +2,10 @@
 {
     public partial class Address
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = null!;
         public string Description { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
-        public int CustomerId { get; set; }
+        public string CustomerId { get; set; } = null!;
 
         public virtual Customer Customer { get; set; } = null!;
     }

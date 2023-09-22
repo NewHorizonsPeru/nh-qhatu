@@ -12,13 +12,16 @@ namespace nh.qhatu.common.infrastructure.data.configurations.entityTypes
 
             builder.Property(e => e.Id).HasColumnName("id");
 
+            builder.HasKey(c => c.Id);
+
             builder.Property(e => e.BrandId).HasColumnName("brand_id");
 
             builder.Property(e => e.CategoryId).HasColumnName("category_id");
 
             builder.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
-                .HasColumnName("created_at");
+                .HasColumnName("created_at")
+                .HasDefaultValueSql("(getutcdate())"); ;
 
             builder.Property(e => e.Description)
                 .HasMaxLength(5000)

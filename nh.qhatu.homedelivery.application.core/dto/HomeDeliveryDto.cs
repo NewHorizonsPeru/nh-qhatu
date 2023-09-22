@@ -2,13 +2,10 @@
 {
     public partial class HomeDeliveryDto
     {
-        public int Id { get; set; }
-        public int OrderId { get; set; }
-        public int CustomerId { get; set; }
-        public string Address { get; set; } = null!;
-        public int Departament { get; set; }
-        public int Province { get; set; }
-        public int District { get; set; }
+        public string Id { get; set; } = null!;
+        public string OrderId { get; set; } = null!;
+        public string CustomerId { get; set; } = null!;
+        public string AddressId { get; set; } = null!;
         public int State { get; set; }
     }
 }

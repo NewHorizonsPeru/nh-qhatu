@@ -2,7 +2,7 @@
 {
     public partial class CustomerDto
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = null!;
         public string Names { get; set; } = null!;
         public string LastNames { get; set; } = null!;
         public string Email { get; set; } = null!;

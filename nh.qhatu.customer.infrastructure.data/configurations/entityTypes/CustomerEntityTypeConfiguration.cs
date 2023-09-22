@@ -12,6 +12,8 @@ namespace nh.qhatu.customer.infrastructure.data.configurations.entityTypes
 
             builder.Property(e => e.Id).HasColumnName("id");
 
+            builder.HasKey(c => c.Id);
+
             builder.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
@@ -35,11 +37,6 @@ namespace nh.qhatu.customer.infrastructure.data.configurations.entityTypes
                 .HasMaxLength(500)
                 .IsUnicode(false)
                 .HasColumnName("names");
-
-            builder.Property(e => e.Password)
-                .HasMaxLength(250)
-                .IsUnicode(false)
-                .HasColumnName("password");
 
             builder.Property(e => e.PhoneNumber)
                 .HasMaxLength(15)

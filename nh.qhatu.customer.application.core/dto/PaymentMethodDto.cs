@@ -2,11 +2,11 @@
 {
     public partial class PaymentMethodDto
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = null!;
         public string CreditCardNumber { get; set; } = null!;
-        public int CreditCardTypeId { get; set; }
+        public string CreditCardTypeId { get; set; } = null!;
         public string ExpirationDate { get; set; } = null!;
-        public int CustomerId { get; set; }
+        public string CustomerId { get; set; } = null!;
         public int Active { get; set; }
     }
 }

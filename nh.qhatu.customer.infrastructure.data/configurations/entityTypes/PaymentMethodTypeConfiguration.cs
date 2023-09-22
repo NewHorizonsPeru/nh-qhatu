@@ -12,6 +12,8 @@ namespace nh.qhatu.customer.infrastructure.data.configurations.entityTypes
 
             builder.Property(e => e.Id).HasColumnName("id");
 
+            builder.HasKey(c => c.Id);
+
             builder.Property(e => e.Active).HasColumnName("active");
 
             builder.Property(e => e.CreatedAt)

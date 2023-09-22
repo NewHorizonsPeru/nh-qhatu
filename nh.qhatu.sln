@@ -83,15 +83,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{42965907-B065-4236-BF26-D76D0323F035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.omnichannel.domain.core", "nh.qhatu.omnichannel.domain.core\nh.qhatu.omnichannel.domain.core.csproj", "{1EBC4A3B-FD38-4EAB-91E6-519C562D4F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.domain.core", "nh.qhatu.omnichannel.domain.core\nh.qhatu.omnichannel.domain.core.csproj", "{1EBC4A3B-FD38-4EAB-91E6-519C562D4F2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.omnichannel.infrastructure.data", "nh.qhatu.omnichannel.infrastructure.data\nh.qhatu.omnichannel.infrastructure.data.csproj", "{9E130500-5838-4E41-A311-FA84DB2D073F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.infrastructure.data", "nh.qhatu.omnichannel.infrastructure.data\nh.qhatu.omnichannel.infrastructure.data.csproj", "{9E130500-5838-4E41-A311-FA84DB2D073F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.omnichannel.application.core", "nh.qhatu.omnichannel.application.core\nh.qhatu.omnichannel.application.core.csproj", "{B2B097A1-B259-4A85-B1B3-2432115678BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.application.core", "nh.qhatu.omnichannel.application.core\nh.qhatu.omnichannel.application.core.csproj", "{B2B097A1-B259-4A85-B1B3-2432115678BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.omnichannel.presentation.api", "nh.qhatu.omnichannel.presentation.api\nh.qhatu.omnichannel.presentation.api.csproj", "{4D22DED1-B87C-43B3-9834-D773C87E0B19}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{485F43CF-29CC-464D-90EC-A7B7C2CFD14C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.presentation.api", "nh.qhatu.omnichannel.presentation.api\nh.qhatu.omnichannel.presentation.api.csproj", "{4D22DED1-B87C-43B3-9834-D773C87E0B19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,10 +173,6 @@ Global
 		{4D22DED1-B87C-43B3-9834-D773C87E0B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D22DED1-B87C-43B3-9834-D773C87E0B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D22DED1-B87C-43B3-9834-D773C87E0B19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{485F43CF-29CC-464D-90EC-A7B7C2CFD14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{485F43CF-29CC-464D-90EC-A7B7C2CFD14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{485F43CF-29CC-464D-90EC-A7B7C2CFD14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{485F43CF-29CC-464D-90EC-A7B7C2CFD14C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

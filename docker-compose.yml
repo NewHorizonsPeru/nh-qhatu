@@ -6,7 +6,27 @@ services:
     build:
       context: .
       dockerfile: nh.qhatu.omnichannel.presentation.api/Dockerfile
+  nh.qhatu.common.presentation.api:
+    image: ${DOCKER_REGISTRY-}nhqhatucommonpresentationapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.common.presentation.api/Dockerfile
+
+  nh.qhatu.customer.presentation.api:
+    image: ${DOCKER_REGISTRY-}nhqhatucustomerpresentationapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.customer.presentation.api/Dockerfile
+
+  nh.qhatu.homedelivery.presentation.api:
+    image: ${DOCKER_REGISTRY-}nhqhatuhomedeliverypresentationapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.homedelivery.presentation.api/Dockerfile
+
 networks:
   default:
     external:
       name: qhatu-network
+
+

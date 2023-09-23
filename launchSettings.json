@@ -4,7 +4,10 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "nh.qhatu.omnichannel.presentation.api": "StartDebugging"
+        "nh.qhatu.omnichannel.presentation.api": "StartWithoutDebugging",
+        "nh.qhatu.common.presentation.api": "StartWithoutDebugging",
+        "nh.qhatu.customer.presentation.api": "StartWithoutDebugging",
+        "nh.qhatu.homedelivery.presentation.api": "StartWithoutDebugging"
       }
     }
   }

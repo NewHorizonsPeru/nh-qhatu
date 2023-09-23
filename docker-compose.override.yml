@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  nh.qhatu.omnichannel.presentation.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "9204:80"

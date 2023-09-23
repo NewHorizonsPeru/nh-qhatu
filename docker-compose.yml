@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  nh.qhatu.omnichannel.presentation.api:
+    image: ${DOCKER_REGISTRY-}nhqhatuomnichannelpresentationapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.omnichannel.presentation.api/Dockerfile
+networks:
+  default:
+    external:
+      name: qhatu-network

@@ -2,7 +2,12 @@
 {
     public partial class Order
     {
-        public string Id { get; set; } = null!;
+        public Order() 
+        {
+            Id = Guid.NewGuid().ToString("N");
+        }
+
+        public string Id { get; set; }
         public string CustomerId { get; set; } = null!;
         public string PaymentId { get; set; } = null!;
         public int State { get; set; }

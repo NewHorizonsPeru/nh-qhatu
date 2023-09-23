@@ -22,76 +22,83 @@ namespace nh.qhatu.omnichannel.infrastructure.data.Migrations
             modelBuilder.Entity("nh.qhatu.omnichannel.domain.core.entities.Order", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("id");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime")
+                        .HasColumnName("created_at");
 
                     b.Property<string>("CustomerId")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("longtext")
+                        .HasColumnName("customer_id");
 
                     b.Property<string>("PaymentId")
                         .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("payment_id");
 
                     b.Property<int>("State")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("state");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("total");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PaymentId");
 
-                    b.ToTable("Order");
+                    b.ToTable("order", (string)null);
                 });
 
             modelBuilder.Entity("nh.qhatu.omnichannel.domain.core.entities.OrderDetail", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("OrderId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("order_id");
 
                     b.Property<string>("ProductId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("product_id");
 
                     b.Property<int>("Quantity")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("quantity");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("total");
 
-                    b.HasKey("Id");
+                    b.HasKey("OrderId", "ProductId");
 
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("OrderDetail");
+                    b.ToTable("order_detail", (string)null);
                 });
 
             modelBuilder.Entity("nh.qhatu.omnichannel.domain.core.entities.Payment", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("id");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime")
+                        .HasColumnName("created_at");
 
                     b.Property<string>("CustomerId")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("longtext")
+                        .HasColumnName("customer_id");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("total");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Payment");
+                    b.ToTable("payment", (string)null);
                 });
 
             modelBuilder.Entity("nh.qhatu.omnichannel.domain.core.entities.Order", b =>
@@ -99,8 +106,8 @@ namespace nh.qhatu.omnichannel.infrastructure.data.Migrations
                     b.HasOne("nh.qhatu.omnichannel.domain.core.entities.Payment", "Payment")
                         .WithMany("Orders")
                         .HasForeignKey("PaymentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_order_payment");
 
                     b.Navigation("Payment");
                 });
@@ -110,8 +117,8 @@ namespace nh.qhatu.omnichannel.infrastructure.data.Migrations
                     b.HasOne("nh.qhatu.omnichannel.domain.core.entities.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_order_detail_order");
 
                     b.Navigation("Order");
                 });

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using nh.qhatu.omnichannel.application.core.dto;
+using nh.qhatu.omnichannel.application.core.dto.Creates;
 using nh.qhatu.omnichannel.domain.core.entities;
 
 namespace nh.qhatu.omnichannel.application.core.mappings
@@ -9,8 +10,11 @@ namespace nh.qhatu.omnichannel.application.core.mappings
        public DtoToEntityProfile() 
        {
             CreateMap<OrderDetailDto, OrderDetail>();
-            CreateMap<OrderDto, OrderDto>();
+            CreateMap<OrderDto, Order>();
             CreateMap<PaymentDto, Payment>();
+
+            CreateMap<CreateOrderDetailDto, OrderDetail>();
+            CreateMap<CreateOrderDto, Order>();
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using nh.qhatu.omnichannel.application.core.dto;
+using nh.qhatu.omnichannel.application.core.dto.Creates;
 using nh.qhatu.omnichannel.application.core.interfaces;
 
 namespace nh.qhatu.omnichannel.presentation.api.Controllers
@@ -18,6 +20,13 @@ namespace nh.qhatu.omnichannel.presentation.api.Controllers
         public IActionResult GetAllOrders() 
         {
             return Ok(_orderService.GetAllOrders());
+        }
+
+        [HttpPost("createOrder")]
+        public IActionResult CreateOrder(CreateOrderDto orderDto) 
+        {
+            _orderService.CreateOrder(orderDto);
+            return Ok();
         }
     }
 }

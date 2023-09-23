@@ -27,6 +27,12 @@ builder.Services.AddDbContext<QhatuContext>(config =>
     config.UseMySQL(builder.Configuration.GetConnectionString("QhatuConnection"));
 });
 
+//HTTP Clients
+builder.Services.AddHttpClient("CommonService", cf =>
+{
+    cf.BaseAddress = new Uri(builder.Configuration["QhatuServices:CommonService"]);
+});
+
 //RabbitMQ Settings
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMqSettings"));
 
@@ -34,7 +40,7 @@ builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("R
 builder.Services.RegisterServices(builder.Configuration);
 
 //Services
-builder.Services.AddTransient<IOrderService, OrderrService>();
+builder.Services.AddTransient<IOrderService, OrderService>();
 
 //Repositories
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();

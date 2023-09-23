@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using nh.qhatu.omnichannel.domain.core.entities;
+using System.Reflection.Emit;
 
 namespace nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes
 {
@@ -10,15 +11,13 @@ namespace nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes
         {
             builder.ToTable("order_detail");
 
-            builder.Property(e => e.Id).HasColumnName("id");
-
-            builder.HasKey(e => e.Id);
-
             builder.Property(e => e.OrderId).HasColumnName("order_id");
 
             builder.Property(e => e.ProductId).HasColumnName("product_id");
 
             builder.Property(e => e.Quantity).HasColumnName("quantity");
+
+            builder.HasKey(k => new { k.OrderId, k.ProductId });
 
             builder.Property(e => e.Total)
                 .HasColumnType("decimal(18, 2)")

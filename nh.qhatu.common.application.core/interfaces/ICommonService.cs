@@ -5,7 +5,7 @@ namespace nh.qhatu.common.application.core.interfaces
     public interface ICommonService
     {
         IEnumerable<BrandDto> GetAllBrands();
-
         IEnumerable<ProductDto> GetAllProducts();
+        ProductDto ValidateProductExistence(string productId);
     }
 }

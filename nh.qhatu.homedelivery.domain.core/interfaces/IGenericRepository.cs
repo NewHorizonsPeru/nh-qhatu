@@ -11,11 +11,11 @@ namespace nh.qhatu.homedelivery.domain.core.interfaces
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = "");
         IQueryable<T> Query(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = "");
-        T GetById(int id);
+        T GetById(string id);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
         void Update(T entityToUpdate);
-        void Update(T entityToUpdate, Func<T, int> getKey);
+        void Update(T entityToUpdate, Func<T, string> getKey);
         void Unmark(T entity);
         IQueryable<T> Queryable();
         void Save();

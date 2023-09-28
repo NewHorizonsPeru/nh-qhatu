@@ -31,5 +31,17 @@ namespace nh.qhatu.common.application.core.services
             var productsDto = _mapper.Map<IEnumerable<ProductDto>>(products);
             return productsDto;
         }
+
+        public ProductDto ValidateProductExistence(string productId)
+        {
+            var product = _productRepository.GetById(productId);
+            if (product == null)
+            {
+                throw new Exception("No se pudo encontrar el producto.");
+            }
+
+            var productDto = _mapper.Map<ProductDto>(product);
+            return productDto;
+        }
     }
 }

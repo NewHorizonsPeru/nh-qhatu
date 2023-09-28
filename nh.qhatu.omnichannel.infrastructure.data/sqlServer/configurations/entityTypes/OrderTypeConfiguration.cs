@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using nh.qhatu.omnichannel.domain.core.entities;
 
-namespace nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes
+namespace nh.qhatu.omnichannel.infrastructure.data.sqlServer.configurations.entityTypes
 {
     public class OrderTypeConfiguration : IEntityTypeConfiguration<Order>
     {
@@ -33,7 +33,7 @@ namespace nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes
                 .HasForeignKey(d => d.PaymentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_order_payment");
-            
+
         }
     }
 }

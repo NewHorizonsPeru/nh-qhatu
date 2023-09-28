@@ -5,8 +5,9 @@ using nh.qhatu.omnichannel.application.core.interfaces;
 using nh.qhatu.omnichannel.application.core.mappings;
 using nh.qhatu.omnichannel.application.core.services;
 using nh.qhatu.omnichannel.domain.core.interfaces;
-using nh.qhatu.omnichannel.infrastructure.data.context;
-using nh.qhatu.omnichannel.infrastructure.data.repositories;
+using nh.qhatu.omnichannel.infrastructure.data.http.repositories;
+using nh.qhatu.omnichannel.infrastructure.data.sqlServer.context;
+using nh.qhatu.omnichannel.infrastructure.data.sqlServer.repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +45,7 @@ builder.Services.AddTransient<IOrderService, OrderService>();
 
 //Repositories
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 
 //Context

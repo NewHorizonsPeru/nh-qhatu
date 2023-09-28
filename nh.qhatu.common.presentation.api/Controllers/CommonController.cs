@@ -26,5 +26,11 @@ namespace nh.qhatu.common.presentation.api.Controllers
         {
             return Ok(_commonService.GetAllProducts());
         }
+
+        [HttpGet("validateProductExistence/{productId}")]
+        public IActionResult ValidateProductExistence(string productId)
+        {
+            return Ok(_commonService.ValidateProductExistence(productId));
+        }
     }
 }

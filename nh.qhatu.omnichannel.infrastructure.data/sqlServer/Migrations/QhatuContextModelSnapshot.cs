@@ -2,19 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using nh.qhatu.omnichannel.infrastructure.data.context;
+using nh.qhatu.omnichannel.infrastructure.data.sqlServer.context;
 
 #nullable disable
 
 namespace nh.qhatu.omnichannel.infrastructure.data.Migrations
 {
     [DbContext(typeof(QhatuContext))]
-    [Migration("20230923164554_Initial Migration")]
-    partial class InitialMigration
+    partial class QhatuContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

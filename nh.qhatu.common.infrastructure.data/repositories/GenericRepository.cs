@@ -81,7 +81,7 @@ namespace nh.qhatu.common.infrastructure.data.repositories
             }
         }
 
-        public T GetById(int id)
+        public T GetById(string id)
         {
             return _context.Set<T>().Find(id);
         }
@@ -102,7 +102,7 @@ namespace nh.qhatu.common.infrastructure.data.repositories
             _context.Entry(entityToUpdate).State = EntityState.Modified;
         }
 
-        public virtual void Update(T entityToUpdate, Func<T, int> getKey)
+        public virtual void Update(T entityToUpdate, Func<T, string> getKey)
         {
             var entry = _context.Entry<T>(entityToUpdate);
 

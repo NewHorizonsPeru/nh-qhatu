@@ -24,6 +24,6 @@ services:
   nh.qhatu.omnichannel.presentation.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - QhatuServices__CommonService=http:nh.qhatu.common.presentation.api:9201
+      - QhatuServices__CommonService=http://nh.qhatu.common.presentation.api
     ports:
       - "9204:80"

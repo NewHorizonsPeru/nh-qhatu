@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using nh.qhatu.omnichannel.domain.core.entities;
 using System.Reflection.Emit;
 
-namespace nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes
+namespace nh.qhatu.omnichannel.infrastructure.data.sqlServer.configurations.entityTypes
 {
     public class OrderDetailTypeConfiguration : IEntityTypeConfiguration<OrderDetail>
     {

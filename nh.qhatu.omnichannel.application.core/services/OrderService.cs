@@ -11,11 +11,13 @@ namespace nh.qhatu.omnichannel.application.core.services
     {
         private readonly IMapper _mapper;
         private readonly IOrderRepository _orderRepository;
+        private readonly IProductRepository _productRepository;
 
-        public OrderService(IMapper mapper, IOrderRepository orderRepository)
+        public OrderService(IMapper mapper, IOrderRepository orderRepository, IProductRepository productRepository)
         {
             _mapper = mapper;
             _orderRepository = orderRepository;
+            _productRepository = productRepository;
         }
 
         public ICollection<OrderDto> GetAllOrders()
@@ -25,11 +27,30 @@ namespace nh.qhatu.omnichannel.application.core.services
             return ordersDto;
         }
 
-        public void CreateOrder(CreateOrderDto orderDto) 
+        public async void CreateOrder(CreateOrderDto orderDto) 
         {
             var order = _mapper.Map<Order>(orderDto);
-            _orderRepository.Add(order);
-            _orderRepository.Save();
+            var orderDetail = order.OrderDetails;
+            var productExistence = true;
+
+            foreach (var itemOrderDetail in orderDetail)
+            {
+                var productId = itemOrderDetail.ProductId;
+                var product = await _productRepository.ValidateProductExistence(productId);
+                if (product == null)
+                {
+                    productExistence = false;
+                    break;
+                }
+            }
+
+            if (productExistence)
+            {
+                _orderRepository.Add(order);
+                _orderRepository.Save();
+
+            }
+
         }
     }
 }

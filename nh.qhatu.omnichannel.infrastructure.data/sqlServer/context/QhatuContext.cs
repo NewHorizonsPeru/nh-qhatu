@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using nh.qhatu.omnichannel.domain.core.entities;
-using nh.qhatu.omnichannel.infrastructure.data.configurations.entityTypes;
+using nh.qhatu.omnichannel.infrastructure.data.sqlServer.configurations.entityTypes;
 
-namespace nh.qhatu.omnichannel.infrastructure.data.context
+namespace nh.qhatu.omnichannel.infrastructure.data.sqlServer.context
 {
     public partial class QhatuContext : DbContext
     {

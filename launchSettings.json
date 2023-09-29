@@ -8,7 +8,7 @@
       "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
         "nh.qhatu.omnichannel.presentation.api": "StartDebugging",
-        "nh.qhatu.common.presentation.api": "StartDebugging",
+        "nh.qhatu.common.presentation.api": "DoNotStart",
         "nh.qhatu.customer.presentation.api": "DoNotStart",
         "nh.qhatu.homedelivery.presentation.api": "DoNotStart"
       }

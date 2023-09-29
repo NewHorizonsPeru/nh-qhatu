@@ -8,8 +8,11 @@ using nh.qhatu.omnichannel.domain.core.interfaces;
 using nh.qhatu.omnichannel.infrastructure.data.http.repositories;
 using nh.qhatu.omnichannel.infrastructure.data.sqlServer.context;
 using nh.qhatu.omnichannel.infrastructure.data.sqlServer.repositories;
+using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddConfigServer();
 
 // Add services to the container.
 
@@ -18,24 +21,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 //AutoMapper
 builder.Services.AddAutoMapper(typeof(EntityToDtoProfile), typeof(DtoToEntityProfile));
 
 //SQL Server
 builder.Services.AddDbContext<QhatuContext>(config =>
 {
-    config.UseMySQL(builder.Configuration.GetConnectionString("QhatuConnection"));
+    config.UseMySQL(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
 
 //HTTP Clients
 builder.Services.AddHttpClient("CommonService", cf =>
 {
-    cf.BaseAddress = new Uri(builder.Configuration["QhatuServices:CommonService"]);
+    cf.BaseAddress = new Uri(builder.Configuration["qhatuServices:commonService"]);
 });
 
 //RabbitMQ Settings
-builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMqSettings"));
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("rabbitMqSettings"));
 
 //IoC
 builder.Services.RegisterServices(builder.Configuration);
@@ -61,7 +63,7 @@ builder.Services.AddCors(opt =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();

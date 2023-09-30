@@ -9,8 +9,11 @@ using nh.qhatu.homedelivery.infrastructure.data.context;
 using nh.qhatu.homedelivery.infrastructure.data.repositories;
 using nh.qhatu.infra.bus.settings;
 using nh.qhatu.infra.ioc;
+using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddConfigServer();
 
 // Add services to the container.
 
@@ -25,7 +28,7 @@ builder.Services.AddAutoMapper(typeof(EntityToDtoProfile), typeof(DtoToEntityPro
 //SQL Server
 builder.Services.AddDbContext<QhatuContext>(config =>
 {
-    config.UseNpgsql(builder.Configuration.GetConnectionString("QhatuConnection"));
+    config.UseNpgsql(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
 
 //RabbitMQ Settings
@@ -53,7 +56,7 @@ builder.Services.AddCors(opt =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();

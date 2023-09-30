@@ -24,9 +24,16 @@ services:
       context: .
       dockerfile: nh.qhatu.homedelivery.presentation.api/Dockerfile
 
+  nh.qhatu.api.gateway:
+    image: ${DOCKER_REGISTRY-}nhqhatuapigateway
+    build:
+      context: .
+      dockerfile: nh.qhatu.api.gateway/Dockerfile
+
 networks:
   default:
     external:
       name: qhatu-network
+
 
 

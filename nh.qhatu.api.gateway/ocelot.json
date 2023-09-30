@@ -1,0 +1,63 @@
+{
+  "Routes": [
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/common/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.common.presentation.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/common/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/customer/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.customer.presentation.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/customer/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/homedelivery/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.homedelivery.presentation.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/homedelivery/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/omnichannel/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.omnichannel.presentation.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/omnichannel/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://nh.qhatu.api.gateway"
+  }
+}

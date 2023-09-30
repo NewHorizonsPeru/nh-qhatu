@@ -24,3 +24,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9204:80"
+  nh.qhatu.api.gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9500:80"
+

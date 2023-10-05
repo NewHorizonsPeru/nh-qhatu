@@ -11,10 +11,10 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\nh.qhatu.common.infrastructure.data\nh.qhatu.common.infrastructure.data.csproj" />
-	  <ProjectReference Include="..\nh.qhatu.customer.infrastructure.data\nh.qhatu.customer.infrastructure.data.csproj" />
+	  <ProjectReference Include="..\nh.qhatu.common.infrastructure\nh.qhatu.common.infrastructure.csproj" />
+	  <ProjectReference Include="..\nh.qhatu.customer.infrastructure\nh.qhatu.customer.infrastructure.csproj" />
 	  <ProjectReference Include="..\nh.qhatu.infrastructure.bus\nh.qhatu.infrastructure.bus.csproj" />
-	  <ProjectReference Include="..\nh.qhatu.omnichannel.infrastructure.data\nh.qhatu.omnichannel.infrastructure.data.csproj" />
-	  <ProjectReference Include="..\nh.qhatu.security.infrastructure.data\nh.qhatu.security.infrastructure.data.csproj" />
+	  <ProjectReference Include="..\nh.qhatu.omnichannel.infrastructure\nh.qhatu.omnichannel.infrastructure.csproj" />
+	  <ProjectReference Include="..\nh.qhatu.security.infrastructure\nh.qhatu.security.infrastructure.csproj" />
 	</ItemGroup>
 </Project>

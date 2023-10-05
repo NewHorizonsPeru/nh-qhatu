@@ -1,6 +1,6 @@
-﻿using nh.qhatu.domain.core.events;
+﻿using nh.qhatu.domain.events;
 
-namespace nh.qhatu.domain.core.commands
+namespace nh.qhatu.domain.commands
 {
     public abstract class Command : Message
     {

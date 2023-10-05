@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />
-    <ProjectReference Include="..\nh.qhatu.security.application.core\nh.qhatu.security.application.core.csproj" />
+    <ProjectReference Include="..\nh.qhatu.security.application\nh.qhatu.security.application.csproj" />
   </ItemGroup>
 
 </Project>

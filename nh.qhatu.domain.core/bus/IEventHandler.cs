@@ -1,6 +1,6 @@
-﻿using nh.qhatu.domain.core.events;
+﻿using nh.qhatu.domain.events;
 
-namespace nh.qhatu.domain.core.bus
+namespace nh.qhatu.domain.bus
 {
     public interface IEventHandler<in TEvent> : IEventHandler
         where TEvent : Event

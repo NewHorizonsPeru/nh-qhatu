@@ -1,24 +1,24 @@
 version: '3.4'
 
 services:
-  nh.qhatu.omnichannel.presentation.api:
+  nh.qhatu.omnichannel.api:
     image: ${DOCKER_REGISTRY-}nhqhatuomnichannelpresentationapi
     build:
       context: .
       dockerfile: nh.qhatu.omnichannel.presentation.api/Dockerfile
-  nh.qhatu.common.presentation.api:
+  nh.qhatu.common.api:
     image: ${DOCKER_REGISTRY-}nhqhatucommonpresentationapi
     build:
       context: .
       dockerfile: nh.qhatu.common.presentation.api/Dockerfile
 
-  nh.qhatu.customer.presentation.api:
+  nh.qhatu.customer.api:
     image: ${DOCKER_REGISTRY-}nhqhatucustomerpresentationapi
     build:
       context: .
       dockerfile: nh.qhatu.customer.presentation.api/Dockerfile
 
-  nh.qhatu.homedelivery.presentation.api:
+  nh.qhatu.homedelivery.api:
     image: ${DOCKER_REGISTRY-}nhqhatuhomedeliverypresentationapi
     build:
       context: .

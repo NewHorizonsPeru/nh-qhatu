@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using nh.qhatu.infrasctructure.crosscutting.Jwt;
 using nh.qhatu.security.api.Middleware;
-using nh.qhatu.security.application.core.interfaces;
-using nh.qhatu.security.application.core.mappgins;
-using nh.qhatu.security.application.core.services;
-using nh.qhatu.security.domain.core.Interfaces;
-using nh.qhatu.security.infrastructure.data.Context;
-using nh.qhatu.security.infrastructure.data.Repositories;
+using nh.qhatu.security.application.interfaces;
+using nh.qhatu.security.application.mappgins;
+using nh.qhatu.security.application.services;
+using nh.qhatu.security.domain.interfaces;
+using nh.qhatu.security.infrastructure.context;
+using nh.qhatu.security.infrastructure.repositories;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-﻿namespace nh.qhatu.domain.core.events
+﻿namespace nh.qhatu.domain.events
 {
     public abstract class Event
     {

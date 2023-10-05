@@ -1,8 +1,8 @@
-﻿using nh.qhatu.domain.core.bus;
-using nh.qhatu.domain.core.commands;
-using nh.qhatu.domain.core.events;
+﻿using nh.qhatu.domain.bus;
+using nh.qhatu.domain.commands;
+using nh.qhatu.domain.events;
 
-namespace nh.micro.qhatu.domain.core.bus
+namespace nh.micro.qhatu.domain.bus
 {
     public interface IEventBus
     {

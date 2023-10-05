@@ -5,12 +5,12 @@
       "commandVersion": "1.0",
       "composeLaunchAction": "LaunchBrowser",
       "composeLaunchServiceName": "nh.qhatu.api.gateway",
-      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/weatherforecast",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
-        "nh.qhatu.omnichannel.presentation.api": "DoNotStart",
-        "nh.qhatu.common.presentation.api": "DoNotStart",
-        "nh.qhatu.customer.presentation.api": "StartDebugging",
-        "nh.qhatu.homedelivery.presentation.api": "DoNotStart",
+        "nh.qhatu.omnichannel.api": "DoNotStart",
+        "nh.qhatu.common.api": "DoNotStart",
+        "nh.qhatu.customer.api": "StartDebugging",
+        "nh.qhatu.homedelivery.api": "DoNotStart",
         "nh.qhatu.api.gateway": "StartDebugging",
         "nh.qhatu.security.api": "StartDebugging"
       }

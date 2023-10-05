@@ -29,13 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FD8F8438-1AA3-46D6-9791-4E8ED168AEBC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.presentation.api", "nh.qhatu.common.presentation.api\nh.qhatu.common.presentation.api.csproj", "{BCA885B9-D1EB-4F7B-88D1-D25E1F7C3F43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.api", "nh.qhatu.common.api\nh.qhatu.common.api.csproj", "{BCA885B9-D1EB-4F7B-88D1-D25E1F7C3F43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.domain.core", "nh.qhatu.common.domain.core\nh.qhatu.common.domain.core.csproj", "{760E9117-69EF-43F8-ACCF-69F54DE6D760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.domain", "nh.qhatu.common.domain\nh.qhatu.common.domain.csproj", "{760E9117-69EF-43F8-ACCF-69F54DE6D760}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.application.core", "nh.qhatu.common.application.core\nh.qhatu.common.application.core.csproj", "{F58D0BDE-7A64-4F66-B546-C22118E226F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.application", "nh.qhatu.common.application\nh.qhatu.common.application.csproj", "{F58D0BDE-7A64-4F66-B546-C22118E226F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.infrastructure.data", "nh.qhatu.common.infrastructure.data\nh.qhatu.common.infrastructure.data.csproj", "{FFA3092C-0E7F-4B98-A907-5A5030C41742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.common.infrastructure", "nh.qhatu.common.infrastructure\nh.qhatu.common.infrastructure.csproj", "{FFA3092C-0E7F-4B98-A907-5A5030C41742}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home Delivery", "Home Delivery", "{02981118-5113-4A5C-B0F0-B52D81533B35}"
 EndProject
@@ -51,13 +51,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BEC94A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8D1D6880-05E2-4D91-8FCB-9172500DCCB8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.domain.core", "nh.qhatu.customer.domain.core\nh.qhatu.customer.domain.core.csproj", "{149CD76E-9DD5-47CA-8103-53AB753BE6A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.domain", "nh.qhatu.customer.domain\nh.qhatu.customer.domain.csproj", "{149CD76E-9DD5-47CA-8103-53AB753BE6A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.infrastructure.data", "nh.qhatu.customer.infrastructure.data\nh.qhatu.customer.infrastructure.data.csproj", "{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.infrastructure", "nh.qhatu.customer.infrastructure\nh.qhatu.customer.infrastructure.csproj", "{4201DE02-6CC0-43EC-B75A-0479BCDC8EA6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.application.core", "nh.qhatu.customer.application.core\nh.qhatu.customer.application.core.csproj", "{816E759F-2F48-41ED-9666-7E982C867050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.application", "nh.qhatu.customer.application\nh.qhatu.customer.application.csproj", "{816E759F-2F48-41ED-9666-7E982C867050}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.presentation.api", "nh.qhatu.customer.presentation.api\nh.qhatu.customer.presentation.api.csproj", "{26E10E9A-4BA7-4255-A5E1-40BBF830F714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.customer.api", "nh.qhatu.customer.api\nh.qhatu.customer.api.csproj", "{26E10E9A-4BA7-4255-A5E1-40BBF830F714}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{0640FB74-F728-44A6-92BF-B72BDE5E4557}"
 EndProject
@@ -67,13 +67,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{3151423C-EB47-425A-82D1-C5EC2A6C3898}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.domain.core", "nh.qhatu.homedelivery.domain.core\nh.qhatu.homedelivery.domain.core.csproj", "{572A1D4D-C084-45D4-9A91-82CB336B0209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.domain", "nh.qhatu.homedelivery.domain\nh.qhatu.homedelivery.domain.csproj", "{572A1D4D-C084-45D4-9A91-82CB336B0209}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.infrastructure.data", "nh.qhatu.homedelivery.infrastructure.data\nh.qhatu.homedelivery.infrastructure.data.csproj", "{66279038-0F14-4AC1-A3DD-AA4EFC70964B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.infrastructure", "nh.qhatu.homedelivery.infrastructure\nh.qhatu.homedelivery.infrastructure.csproj", "{66279038-0F14-4AC1-A3DD-AA4EFC70964B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.application.core", "nh.qhatu.homedelivery.application.core\nh.qhatu.homedelivery.application.core.csproj", "{66C26399-F118-4BCA-ADD9-2437DD1F1DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.application", "nh.qhatu.homedelivery.application\nh.qhatu.homedelivery.application.csproj", "{66C26399-F118-4BCA-ADD9-2437DD1F1DA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.presentation.api", "nh.qhatu.homedelivery.presentation.api\nh.qhatu.homedelivery.presentation.api.csproj", "{4547D60B-E3DE-4AE9-A8E6-65A3EA277ACC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.homedelivery.api", "nh.qhatu.homedelivery.api\nh.qhatu.homedelivery.api.csproj", "{4547D60B-E3DE-4AE9-A8E6-65A3EA277ACC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{24D11567-A220-4E7E-B497-0468F223E28A}"
 EndProject
@@ -83,13 +83,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{42965907-B065-4236-BF26-D76D0323F035}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.domain.core", "nh.qhatu.omnichannel.domain.core\nh.qhatu.omnichannel.domain.core.csproj", "{1EBC4A3B-FD38-4EAB-91E6-519C562D4F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.domain", "nh.qhatu.omnichannel.domain\nh.qhatu.omnichannel.domain.csproj", "{1EBC4A3B-FD38-4EAB-91E6-519C562D4F2A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.infrastructure.data", "nh.qhatu.omnichannel.infrastructure.data\nh.qhatu.omnichannel.infrastructure.data.csproj", "{9E130500-5838-4E41-A311-FA84DB2D073F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.infrastructure", "nh.qhatu.omnichannel.infrastructure\nh.qhatu.omnichannel.infrastructure.csproj", "{9E130500-5838-4E41-A311-FA84DB2D073F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.application.core", "nh.qhatu.omnichannel.application.core\nh.qhatu.omnichannel.application.core.csproj", "{B2B097A1-B259-4A85-B1B3-2432115678BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.application", "nh.qhatu.omnichannel.application\nh.qhatu.omnichannel.application.csproj", "{B2B097A1-B259-4A85-B1B3-2432115678BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.presentation.api", "nh.qhatu.omnichannel.presentation.api\nh.qhatu.omnichannel.presentation.api.csproj", "{4D22DED1-B87C-43B3-9834-D773C87E0B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.omnichannel.api", "nh.qhatu.omnichannel.api\nh.qhatu.omnichannel.api.csproj", "{4D22DED1-B87C-43B3-9834-D773C87E0B19}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FBF8715E-312F-4B45-BD22-249898494E69}"
 EndProject
@@ -109,11 +109,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5C33E4B6-D47B-4DB7-BDCE-A81C6E741818}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.infrastructure.data", "nh.qhatu.security.infrastructure.data\nh.qhatu.security.infrastructure.data.csproj", "{95F30ACA-822C-4A0D-99F1-3814BDD894CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.infrastructure", "nh.qhatu.security.infrastructure\nh.qhatu.security.infrastructure.csproj", "{95F30ACA-822C-4A0D-99F1-3814BDD894CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.domain.core", "nh.qhatu.security.domain.core\nh.qhatu.security.domain.core.csproj", "{C7C19D59-4F10-461C-9839-FE2CAAC89B6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.domain", "nh.qhatu.security.domain\nh.qhatu.security.domain.csproj", "{C7C19D59-4F10-461C-9839-FE2CAAC89B6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.application.core", "nh.qhatu.security.application.core\nh.qhatu.security.application.core.csproj", "{CF81E851-302C-48EC-B892-73578C99303C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.security.application", "nh.qhatu.security.application\nh.qhatu.security.application.csproj", "{CF81E851-302C-48EC-B892-73578C99303C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross-Cutting", "Cross-Cutting", "{3EE08932-CF0F-4F23-BCF0-33589AFBD99D}"
 EndProject

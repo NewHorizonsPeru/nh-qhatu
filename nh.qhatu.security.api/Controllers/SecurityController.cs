@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using nh.qhatu.security.application.core.dto;
-using nh.qhatu.security.application.core.interfaces;
+using nh.qhatu.security.application.dto;
+using nh.qhatu.security.application.interfaces;
 
 namespace nh.qhatu.security.api.Controllers
 {

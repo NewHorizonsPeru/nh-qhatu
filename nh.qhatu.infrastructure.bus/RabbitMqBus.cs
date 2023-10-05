@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using nh.micro.qhatu.domain.core.bus;
-using nh.qhatu.domain.core.bus;
-using nh.qhatu.domain.core.commands;
-using nh.qhatu.domain.core.events;
+using nh.micro.qhatu.domain.bus;
+using nh.qhatu.domain.bus;
+using nh.qhatu.domain.commands;
+using nh.qhatu.domain.events;
 using nh.qhatu.infra.bus.settings;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;

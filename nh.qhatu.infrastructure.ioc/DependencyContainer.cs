@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using nh.micro.qhatu.domain.core.bus;
-using nh.qhatu.domain.core.bus;
+using nh.micro.qhatu.domain.bus;
+using nh.qhatu.domain.bus;
 using nh.qhatu.infra.bus;
 using nh.qhatu.infra.bus.settings;
 using System.Reflection;

@@ -1,25 +1,25 @@
 version: '3.4'
 
 services:
-  nh.qhatu.common.presentation.api:
+  nh.qhatu.common.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9201:80"
 
-  nh.qhatu.customer.presentation.api:
+  nh.qhatu.customer.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9202:80"
 
-  nh.qhatu.homedelivery.presentation.api:
+  nh.qhatu.homedelivery.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9203:80"
 
-  nh.qhatu.omnichannel.presentation.api:
+  nh.qhatu.omnichannel.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:

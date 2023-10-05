@@ -27,5 +27,11 @@ namespace nh.qhatu.security.api.Controllers
             _securityService.SignUp(userDto);
             return Ok();
         }
+
+        [HttpPost("signIn")]
+        public IActionResult SignIn([FromBody] SignInRequestDto signInRequestDto)
+        {
+            return Ok(_securityService.SignIn(signInRequestDto));
+        }
     }
 }

@@ -4,14 +4,15 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "composeLaunchAction": "LaunchBrowser",
-      "composeLaunchServiceName": "nh.qhatu.customer.presentation.api",
+      "composeLaunchServiceName": "nh.qhatu.security.api",
       "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
       "serviceActions": {
         "nh.qhatu.omnichannel.presentation.api": "DoNotStart",
         "nh.qhatu.common.presentation.api": "DoNotStart",
-        "nh.qhatu.customer.presentation.api": "StartDebugging",
+        "nh.qhatu.customer.presentation.api": "DoNotStart",
         "nh.qhatu.homedelivery.presentation.api": "DoNotStart",
-        "nh.qhatu.api.gateway": "StartDebugging"
+        "nh.qhatu.api.gateway": "DoNotStart",
+        "nh.qhatu.security.api": "StartDebugging"
       }
     }
   }

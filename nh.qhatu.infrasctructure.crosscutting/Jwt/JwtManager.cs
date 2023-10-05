@@ -4,9 +4,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace nh.qhatu.crosscutting.Jwt
+namespace nh.qhatu.infrasctructure.crosscutting.Jwt
 {
-    public class JwtManager
+    public class JwtManager : IJwtManager
     {
         private readonly IConfiguration _configuration;
 
@@ -17,10 +17,10 @@ namespace nh.qhatu.crosscutting.Jwt
 
         public string GenerateToken(string userId, string username, string customerId)
         {
-            var issuer = _configuration["JwtSettings:Issuer"];
-            var audience = _configuration["JwtSettings:Audience"];
-            var lifetime = _configuration.GetValue<int>("JwtSettings:Lifetime");
-            var secretKey = _configuration["JwtSettings:SecretKey"];
+            var issuer = _configuration["jwtSettings:issuer"];
+            var audience = _configuration["jwtSettings:audience"];
+            var lifetime = _configuration.GetValue<int>("jwtSettings:lifetime");
+            var secretKey = _configuration["jwtSettings:secretKey"];
 
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);

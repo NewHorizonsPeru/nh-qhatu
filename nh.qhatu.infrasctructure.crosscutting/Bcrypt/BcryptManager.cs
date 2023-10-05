@@ -1,6 +1,6 @@
 ﻿using BCryptNet = BCrypt.Net.BCrypt;
 
-namespace nh.qhatu.crosscutting.Bcrypt
+namespace nh.qhatu.infrasctructure.crosscutting.Bcrypt
 {
     public static class BCryptManager
     {

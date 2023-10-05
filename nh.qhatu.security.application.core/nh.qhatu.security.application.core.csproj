@@ -11,7 +11,7 @@
   </ItemGroup>	
 
   <ItemGroup>
-    <ProjectReference Include="..\nh.qhatu.crosscutting\nh.qhatu.crosscutting.csproj" />
+    <ProjectReference Include="..\nh.qhatu.infrasctructure.crosscutting\nh.qhatu.infrasctructure.crosscutting.csproj" />
     <ProjectReference Include="..\nh.qhatu.security.domain.core\nh.qhatu.security.domain.core.csproj" />
   </ItemGroup>
 

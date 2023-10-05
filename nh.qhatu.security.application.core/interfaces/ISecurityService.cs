@@ -5,7 +5,7 @@ namespace nh.qhatu.security.application.core.interfaces
     public interface ISecurityService
     {
         void SignUp(CreateUserDto userDto);
-        UserDto SignIn(string username, string password);
+        SignInResponseDto SignIn(SignInRequestDto signInRequestDto);
         ICollection<UserDto> GetAllUsers();
     }
 }

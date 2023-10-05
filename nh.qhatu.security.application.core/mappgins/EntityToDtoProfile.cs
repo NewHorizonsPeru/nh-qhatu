@@ -9,6 +9,7 @@ namespace nh.qhatu.security.application.core.mappgins
         public EntityToDtoProfile()
         {
             CreateMap<User, UserDto>();
+            CreateMap<User, SignInResponseDto>();
         }
     }
 }

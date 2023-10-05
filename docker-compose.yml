@@ -30,10 +30,17 @@ services:
       context: .
       dockerfile: nh.qhatu.api.gateway/Dockerfile
 
+  nh.qhatu.security.api:
+    image: ${DOCKER_REGISTRY-}nhqhatusecurityapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.security.api/Dockerfile
+
 networks:
   default:
     external:
       name: qhatu-network
+
 
 
 

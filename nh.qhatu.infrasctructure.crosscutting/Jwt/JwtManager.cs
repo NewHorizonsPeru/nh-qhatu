@@ -15,7 +15,7 @@ namespace nh.qhatu.infrasctructure.crosscutting.Jwt
             _configuration = configuration;
         }
 
-        public string GenerateToken(string userId, string username, string customerId)
+        public string GenerateToken(string userId, string username, string customerId, string role)
         {
             var issuer = _configuration["jwtSettings:issuer"];
             var audience = _configuration["jwtSettings:audience"];
@@ -30,14 +30,14 @@ namespace nh.qhatu.infrasctructure.crosscutting.Jwt
             {
                 new Claim(ClaimTypes.Sid, userId),
                 new Claim(ClaimTypes.Email, username),
-                new Claim(ClaimTypes.PrimarySid, customerId)
+                new Claim(ClaimTypes.PrimarySid, customerId),
+                new Claim("Role", role),
             };
 
-            var payload = new JwtPayload(issuer, audience, claims, DateTime.UtcNow, DateTime.UtcNow.AddHours(lifetime));
+            var payload = new JwtPayload(issuer, audience, claims, DateTime.UtcNow, DateTime.UtcNow.AddSeconds(lifetime));
             var token = new JwtSecurityToken(header, payload);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
-
         }
     }
 }

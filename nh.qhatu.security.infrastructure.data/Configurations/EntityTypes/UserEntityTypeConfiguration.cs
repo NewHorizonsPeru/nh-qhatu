@@ -21,6 +21,9 @@ namespace nh.qhatu.security.infrastructure.data.Configurations.EntityTypes
             builder.Property(e => e.CustomerId)
                 .ToJsonProperty("customerId");
 
+            builder.Property(e => e.Role)
+                .ToJsonProperty("role");
+
             builder.HasNoDiscriminator();
 
             builder.HasPartitionKey(e => e.Id);

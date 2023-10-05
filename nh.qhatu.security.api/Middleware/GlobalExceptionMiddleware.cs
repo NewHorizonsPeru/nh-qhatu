@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using nh.qhatu.security.api.Model;
+using nh.qhatu.infrasctructure.crosscutting.Exceptions;
+using nh.qhatu.infrasctructure.crosscutting.Models;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -37,18 +38,21 @@ namespace nh.qhatu.security.api.Middleware
 
             switch(currentException)
             {
-                case ApplicationException ex:
-                    exceptionResponseModel.StatusCode = (int) HttpStatusCode.BadRequest;
+                case BusinessException ex:
+                    exceptionResponseModel.StatusCode = (int)HttpStatusCode.BadRequest;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                     exceptionResponseModel.Message = ex.Message;
-                    exceptionResponseModel.StackTrace = ex.StackTrace ?? string.Empty;
+                    exceptionResponseModel.StackTrace = string.Empty;
                     break;
                 case NullReferenceException ex:
-                    exceptionResponseModel.StatusCode = (int)HttpStatusCode.BadRequest;
+                    exceptionResponseModel.StatusCode = (int)HttpStatusCode.NotFound;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.NotFound;
                     exceptionResponseModel.Message = ex.Message;
                     exceptionResponseModel.StackTrace = ex.StackTrace ?? string.Empty;
                     break;
                 default:
                     exceptionResponseModel.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                     exceptionResponseModel.Message = "Error interno, vuelva a intentar en unos minutos.";
                     exceptionResponseModel.StackTrace = currentException.StackTrace ?? string.Empty;
                     break;

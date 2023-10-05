@@ -1,10 +1,15 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using nh.qhatu.api.gateway.Middlwares;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Steeltoe.Extensions.Configuration.ConfigServer;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Stelltoe Config Server
+builder.AddConfigServer();
 
 // Add services to the container.
 
@@ -22,9 +27,9 @@ builder.Services
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["JwtConfig:Issuer"],
-            ValidAudience = builder.Configuration["JwtConfig:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtConfig:SecretKey"]))
+            ValidIssuer = builder.Configuration["jwtSettings:issuer"],
+            ValidAudience = builder.Configuration["jwtSettings:audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwtSettings:secretKey"]))
         };
     }
 );
@@ -33,7 +38,11 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
+app.UseMiddleware<AuthorizationMiddleware>();
 
 app.UseOcelot().Wait();
 

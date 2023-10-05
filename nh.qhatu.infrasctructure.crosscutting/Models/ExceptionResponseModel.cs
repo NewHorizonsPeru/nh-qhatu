@@ -1,4 +1,4 @@
-﻿namespace nh.qhatu.security.api.Model
+﻿namespace nh.qhatu.infrasctructure.crosscutting.Models
 {
     public class ExceptionResponseModel
     {

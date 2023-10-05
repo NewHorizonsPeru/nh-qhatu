@@ -14,7 +14,10 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/common/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
     },
     {
       "AuthenticationOptions": {
@@ -30,9 +33,16 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/customer/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RouteClaimsRequirement": {
+        "Role":  "admin"
+      }
     },
     {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       "DownstreamPathTemplate": "/api/homedelivery/{everything_else}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -42,9 +52,16 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/homedelivery/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
     },
     {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       "DownstreamPathTemplate": "/api/omnichannel/{everything_else}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -54,7 +71,22 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/omnichannel/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/security/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.security.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/security/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST"]
     }
   ],
   "GlobalConfiguration": {

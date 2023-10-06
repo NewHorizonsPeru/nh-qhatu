@@ -6,19 +6,16 @@ services:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9201:80"
-
   nh.qhatu.customer.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9202:80"
-
   nh.qhatu.homedelivery.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9203:80"
-
   nh.qhatu.omnichannel.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=dev
@@ -34,4 +31,3 @@ services:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9205:80"
-

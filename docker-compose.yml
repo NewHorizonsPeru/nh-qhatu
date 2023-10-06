@@ -2,27 +2,27 @@ version: '3.4'
 
 services:
   nh.qhatu.omnichannel.api:
-    image: ${DOCKER_REGISTRY-}nhqhatuomnichannelpresentationapi
+    image: ${DOCKER_REGISTRY-}nhqhatuomnichannelapi
     build:
       context: .
-      dockerfile: nh.qhatu.omnichannel.presentation.api/Dockerfile
+      dockerfile: nh.qhatu.omnichannel.api/Dockerfile
   nh.qhatu.common.api:
-    image: ${DOCKER_REGISTRY-}nhqhatucommonpresentationapi
+    image: ${DOCKER_REGISTRY-}nhqhatucommonapi
     build:
       context: .
-      dockerfile: nh.qhatu.common.presentation.api/Dockerfile
+      dockerfile: nh.qhatu.common.api/Dockerfile
 
   nh.qhatu.customer.api:
-    image: ${DOCKER_REGISTRY-}nhqhatucustomerpresentationapi
+    image: ${DOCKER_REGISTRY-}nhqhatucustomerapi
     build:
       context: .
-      dockerfile: nh.qhatu.customer.presentation.api/Dockerfile
+      dockerfile: nh.qhatu.customer.api/Dockerfile
 
   nh.qhatu.homedelivery.api:
-    image: ${DOCKER_REGISTRY-}nhqhatuhomedeliverypresentationapi
+    image: ${DOCKER_REGISTRY-}nhqhatuhomedeliveryapi
     build:
       context: .
-      dockerfile: nh.qhatu.homedelivery.presentation.api/Dockerfile
+      dockerfile: nh.qhatu.homedelivery.api/Dockerfile
 
   nh.qhatu.api.gateway:
     image: ${DOCKER_REGISTRY-}nhqhatuapigateway
@@ -35,7 +35,6 @@ services:
     build:
       context: .
       dockerfile: nh.qhatu.security.api/Dockerfile
-
 networks:
   default:
     external:

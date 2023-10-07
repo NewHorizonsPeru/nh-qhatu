@@ -11,25 +11,21 @@ services:
     build:
       context: .
       dockerfile: nh.qhatu.common.api/Dockerfile
-
   nh.qhatu.customer.api:
     image: ${DOCKER_REGISTRY-}nhqhatucustomerapi
     build:
       context: .
       dockerfile: nh.qhatu.customer.api/Dockerfile
-
   nh.qhatu.homedelivery.api:
     image: ${DOCKER_REGISTRY-}nhqhatuhomedeliveryapi
     build:
       context: .
       dockerfile: nh.qhatu.homedelivery.api/Dockerfile
-
   nh.qhatu.api.gateway:
     image: ${DOCKER_REGISTRY-}nhqhatuapigateway
     build:
       context: .
       dockerfile: nh.qhatu.api.gateway/Dockerfile
-
   nh.qhatu.security.api:
     image: ${DOCKER_REGISTRY-}nhqhatusecurityapi
     build:

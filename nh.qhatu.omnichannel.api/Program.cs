@@ -8,6 +8,7 @@ using nh.qhatu.omnichannel.domain.interfaces;
 using nh.qhatu.omnichannel.infrastructure.http.repositories;
 using nh.qhatu.omnichannel.infrastructure.sqlServer.context;
 using nh.qhatu.omnichannel.infrastructure.sqlServer.repositories;
+using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,6 +60,8 @@ builder.Services.AddCors(opt =>
     opt.AddPolicy("CorsPolicy", b => b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
 
+//Consul
+builder.Services.AddDiscoveryClient();
 
 var app = builder.Build();
 

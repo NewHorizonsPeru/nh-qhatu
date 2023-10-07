@@ -7,6 +7,7 @@ using nh.qhatu.common.infrastructure.context;
 using nh.qhatu.common.infrastructure.repositories;
 using nh.qhatu.infra.bus.settings;
 using nh.qhatu.infra.ioc;
+using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,6 +53,9 @@ builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", b => b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
+
+//Consul
+builder.Services.AddDiscoveryClient();
 
 var app = builder.Build();
 

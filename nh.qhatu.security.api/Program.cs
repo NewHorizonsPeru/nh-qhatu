@@ -7,6 +7,7 @@ using nh.qhatu.security.application.services;
 using nh.qhatu.security.domain.interfaces;
 using nh.qhatu.security.infrastructure.context;
 using nh.qhatu.security.infrastructure.repositories;
+using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,6 +44,9 @@ builder.Services.AddTransient<IJwtManager, JwtManager>();
 
 //Context
 builder.Services.AddTransient<SecurityContext>();
+
+//Consul
+builder.Services.AddDiscoveryClient();
 
 var app = builder.Build();
 

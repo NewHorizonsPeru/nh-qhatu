@@ -1,13 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-using nh.qhatu.infra.bus.settings;
-using nh.qhatu.infra.ioc;
+using nh.qhatu.infrastructure.bus.settings;
+using nh.qhatu.infrastructure.ioc;
 using nh.qhatu.omnichannel.application.interfaces;
 using nh.qhatu.omnichannel.application.mappings;
 using nh.qhatu.omnichannel.application.services;
 using nh.qhatu.omnichannel.domain.interfaces;
-using nh.qhatu.omnichannel.infrastructure.http.repositories;
-using nh.qhatu.omnichannel.infrastructure.sqlServer.context;
-using nh.qhatu.omnichannel.infrastructure.sqlServer.repositories;
+using nh.qhatu.omnichannel.infrastructure.context;
+using nh.qhatu.omnichannel.infrastructure.repositories;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
@@ -31,12 +30,6 @@ builder.Services.AddDbContext<OmnichannelContext>(config =>
     config.UseMySQL(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
 
-//HTTP Clients
-builder.Services.AddHttpClient("CommonService", cf =>
-{
-    cf.BaseAddress = new Uri(builder.Configuration["qhatuServices:commonService"]);
-});
-
 //RabbitMQ Settings
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("rabbitMqSettings"));
 
@@ -48,8 +41,6 @@ builder.Services.AddTransient<IOrderService, OrderService>();
 
 //Repositories
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
-builder.Services.AddTransient<IProductRepository, ProductRepository>();
-
 
 //Context
 builder.Services.AddTransient<OmnichannelContext>();

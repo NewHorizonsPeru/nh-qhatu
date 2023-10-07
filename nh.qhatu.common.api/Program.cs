@@ -5,8 +5,8 @@ using nh.qhatu.common.application.services;
 using nh.qhatu.common.domain.interfaces;
 using nh.qhatu.common.infrastructure.context;
 using nh.qhatu.common.infrastructure.repositories;
-using nh.qhatu.infra.bus.settings;
-using nh.qhatu.infra.ioc;
+using nh.qhatu.infrastructure.bus.settings;
+using nh.qhatu.infrastructure.ioc;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 

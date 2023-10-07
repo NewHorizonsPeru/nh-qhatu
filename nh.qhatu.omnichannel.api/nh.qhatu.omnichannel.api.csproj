@@ -22,6 +22,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />
 		<ProjectReference Include="..\nh.qhatu.omnichannel.application\nh.qhatu.omnichannel.application.csproj" />
+		<ProjectReference Include="..\nh.qhatu.omnichannel.infrastructure\nh.qhatu.omnichannel.infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>

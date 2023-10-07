@@ -12,7 +12,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\nh.qhatu.customer.domain\nh.qhatu.customer.domain.csproj" />
-		<ProjectReference Include="..\nh.qhatu.domain.core\nh.qhatu.domain.core.csproj" />
 	</ItemGroup>
 
 </Project>

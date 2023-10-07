@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\nh.qhatu.common.application\nh.qhatu.common.application.csproj" />
+    <ProjectReference Include="..\nh.qhatu.common.infrastructure\nh.qhatu.common.infrastructure.csproj" />
     <ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />
   </ItemGroup>
 

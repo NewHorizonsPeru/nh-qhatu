@@ -2,13 +2,12 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using nh.micro.qhatu.domain.bus;
 using nh.qhatu.domain.bus;
-using nh.qhatu.infra.bus;
-using nh.qhatu.infra.bus.settings;
+using nh.qhatu.infrastructure.bus;
+using nh.qhatu.infrastructure.bus.settings;
 using System.Reflection;
 
-namespace nh.qhatu.infra.ioc
+namespace nh.qhatu.infrastructure.ioc
 {
     public static class DependencyContainer
     {

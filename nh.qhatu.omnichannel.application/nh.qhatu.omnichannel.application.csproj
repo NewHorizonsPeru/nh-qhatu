@@ -12,7 +12,11 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\nh.qhatu.omnichannel.domain\nh.qhatu.omnichannel.domain.csproj" />
-		<ProjectReference Include="..\nh.qhatu.domain.core\nh.qhatu.domain.core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Commands\" />
+	  <Folder Include="CommandHandlers\" />
 	</ItemGroup>
 
 </Project>

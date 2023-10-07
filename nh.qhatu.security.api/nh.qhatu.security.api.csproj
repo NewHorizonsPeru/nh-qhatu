@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />
     <ProjectReference Include="..\nh.qhatu.security.application\nh.qhatu.security.application.csproj" />
+    <ProjectReference Include="..\nh.qhatu.security.infrastructure\nh.qhatu.security.infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

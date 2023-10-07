@@ -2,16 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using nh.micro.qhatu.domain.bus;
 using nh.qhatu.domain.bus;
 using nh.qhatu.domain.commands;
 using nh.qhatu.domain.events;
-using nh.qhatu.infra.bus.settings;
+using nh.qhatu.infrastructure.bus.settings;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 
-namespace nh.qhatu.infra.bus
+namespace nh.qhatu.infrastructure.bus
 {
     public sealed class RabbitMqBus : IEventBus
     {

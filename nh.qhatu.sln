@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -6,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{13DA33
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{419A9D09-6540-48F7-B97C-432591B0FADD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.domain.core", "nh.qhatu.domain.core\nh.qhatu.domain.core.csproj", "{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.domain", "nh.qhatu.domain\nh.qhatu.domain.csproj", "{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.infrastructure.bus", "nh.qhatu.infrastructure.bus\nh.qhatu.infrastructure.bus.csproj", "{4AA735C1-A50D-4344-8B77-F081D06BBDC8}"
 EndProject
@@ -118,6 +119,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross-Cutting", "Cross-Cutt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.infrasctructure.crosscutting", "nh.qhatu.infrasctructure.crosscutting\nh.qhatu.infrasctructure.crosscutting.csproj", "{EEF2B5C6-024A-4274-A2CC-5B4BDCF4E643}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{0E739851-584F-4813-826B-26D7CC6B3824}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D908CC0E-A689-4C5C-ABBA-54B64841AFA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{839DC396-176D-41D2-930A-2E34C9BADF1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AEEFB1EA-0BFE-4A5F-AC9B-FEC90267683C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.application", "..\nh.qhatu.payment.application\nh.qhatu.payment.application.csproj", "{ABDE8584-5553-4E8C-93BD-05B2074D7160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.domain", "nh.qhatu.payment.domain\nh.qhatu.payment.domain.csproj", "{643519C3-0051-4581-AEEF-79E84B3B99BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.infrastructure", "nh.qhatu.payment.infrastructure\nh.qhatu.payment.infrastructure.csproj", "{419B9622-C909-466B-8EF1-024455C278AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.api", "nh.qhatu.payment.api\nh.qhatu.payment.api.csproj", "{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -228,6 +247,22 @@ Global
 		{EEF2B5C6-024A-4274-A2CC-5B4BDCF4E643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEF2B5C6-024A-4274-A2CC-5B4BDCF4E643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEF2B5C6-024A-4274-A2CC-5B4BDCF4E643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDE8584-5553-4E8C-93BD-05B2074D7160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDE8584-5553-4E8C-93BD-05B2074D7160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDE8584-5553-4E8C-93BD-05B2074D7160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDE8584-5553-4E8C-93BD-05B2074D7160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643519C3-0051-4581-AEEF-79E84B3B99BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643519C3-0051-4581-AEEF-79E84B3B99BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643519C3-0051-4581-AEEF-79E84B3B99BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643519C3-0051-4581-AEEF-79E84B3B99BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{419B9622-C909-466B-8EF1-024455C278AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{419B9622-C909-466B-8EF1-024455C278AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{419B9622-C909-466B-8EF1-024455C278AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{419B9622-C909-466B-8EF1-024455C278AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -286,6 +321,15 @@ Global
 		{CF81E851-302C-48EC-B892-73578C99303C} = {988A87B4-F53A-4E12-A90F-7722B77DBB8E}
 		{3EE08932-CF0F-4F23-BCF0-33589AFBD99D} = {419A9D09-6540-48F7-B97C-432591B0FADD}
 		{EEF2B5C6-024A-4274-A2CC-5B4BDCF4E643} = {3EE08932-CF0F-4F23-BCF0-33589AFBD99D}
+		{6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9} = {2D37710E-4C5B-4C74-A3E7-BF9FE1D6C4D2}
+		{0E739851-584F-4813-826B-26D7CC6B3824} = {6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9}
+		{D908CC0E-A689-4C5C-ABBA-54B64841AFA3} = {6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9}
+		{839DC396-176D-41D2-930A-2E34C9BADF1C} = {6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9}
+		{AEEFB1EA-0BFE-4A5F-AC9B-FEC90267683C} = {6D905CE6-4E75-41FF-A0C9-B85A8F6BA5D9}
+		{ABDE8584-5553-4E8C-93BD-05B2074D7160} = {0E739851-584F-4813-826B-26D7CC6B3824}
+		{643519C3-0051-4581-AEEF-79E84B3B99BC} = {D908CC0E-A689-4C5C-ABBA-54B64841AFA3}
+		{419B9622-C909-466B-8EF1-024455C278AF} = {AEEFB1EA-0BFE-4A5F-AC9B-FEC90267683C}
+		{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB} = {839DC396-176D-41D2-930A-2E34C9BADF1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09F10172-4652-4676-B5D2-4AAB870B26C6}

@@ -86,7 +86,19 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/security/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST"]
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/payment/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "nh.qhatu.payment.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/qhatu/api/payment/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ],
   "GlobalConfiguration": {

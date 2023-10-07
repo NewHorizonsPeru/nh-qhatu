@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\nh.qhatu.domain.core\nh.qhatu.domain.core.csproj" />
+    <ProjectReference Include="..\nh.qhatu.domain\nh.qhatu.domain.csproj" />
   </ItemGroup>
 
 </Project>

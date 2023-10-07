@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using nh.qhatu.api.gateway.Middlwares;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 using System.Text;
 
@@ -16,6 +17,9 @@ builder.AddConfigServer();
 //Ocelot
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot();
+
+//Consul
+builder.Services.AddDiscoveryClient();
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

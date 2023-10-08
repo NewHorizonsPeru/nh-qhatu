@@ -9,14 +9,10 @@ WORKDIR /src
 COPY ["nh.qhatu.customer.api/nh.qhatu.customer.api.csproj", "nh.qhatu.customer.api/"]
 COPY ["nh.qhatu.customer.application/nh.qhatu.customer.application.csproj", "nh.qhatu.customer.application/"]
 COPY ["nh.qhatu.customer.domain/nh.qhatu.customer.domain.csproj", "nh.qhatu.customer.domain/"]
-COPY ["nh.qhatu.domain.core/nh.qhatu.domain.csproj", "nh.qhatu.domain.core/"]
-COPY ["nh.qhatu.infrastructure.ioc/nh.qhatu.infrastructure.ioc.csproj", "nh.qhatu.infrastructure.ioc/"]
-COPY ["nh.qhatu.common.infrastructure/nh.qhatu.common.infrastructure.csproj", "nh.qhatu.common.infrastructure/"]
-COPY ["nh.qhatu.common.domain/nh.qhatu.common.domain.csproj", "nh.qhatu.common.domain/"]
 COPY ["nh.qhatu.customer.infrastructure/nh.qhatu.customer.infrastructure.csproj", "nh.qhatu.customer.infrastructure/"]
+COPY ["nh.qhatu.infrastructure.ioc/nh.qhatu.infrastructure.ioc.csproj", "nh.qhatu.infrastructure.ioc/"]
+COPY ["nh.qhatu.domain/nh.qhatu.domain.csproj", "nh.qhatu.domain/"]
 COPY ["nh.qhatu.infrastructure.bus/nh.qhatu.infrastructure.bus.csproj", "nh.qhatu.infrastructure.bus/"]
-COPY ["nh.qhatu.omnichannel.infrastructure/nh.qhatu.omnichannel.infrastructure.csproj", "nh.qhatu.omnichannel.infrastructure/"]
-COPY ["nh.qhatu.omnichannel.domain/nh.qhatu.omnichannel.domain.csproj", "nh.qhatu.omnichannel.domain/"]
 RUN dotnet restore "nh.qhatu.customer.api/nh.qhatu.customer.api.csproj"
 COPY . .
 WORKDIR "/src/nh.qhatu.customer.api"

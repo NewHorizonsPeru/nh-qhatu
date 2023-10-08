@@ -31,3 +31,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9205:80"
+  nh.qhatu.payment.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9206:80"
+

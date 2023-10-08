@@ -10,7 +10,6 @@ namespace nh.qhatu.omnichannel.application.mappings
        {
             CreateMap<OrderDetail, OrderDetailDto>();
             CreateMap<Order, OrderDto>();
-            CreateMap<Payment, PaymentDto>();
         }
     }
 }

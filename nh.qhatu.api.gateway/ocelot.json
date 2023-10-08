@@ -9,7 +9,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "nh.qhatu.common.presentation.api",
+          "Host": "nh.qhatu.common.api",
           "Port": 80
         }
       ],
@@ -28,7 +28,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "nh.qhatu.customer.presentation.api",
+          "Host": "nh.qhatu.customer.api",
           "Port": 80
         }
       ],
@@ -47,7 +47,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "nh.qhatu.homedelivery.presentation.api",
+          "Host": "nh.qhatu.homedelivery.api",
           "Port": 80
         }
       ],
@@ -66,7 +66,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "nh.qhatu.omnichannel.presentation.api",
+          "Host": "nh.qhatu.omnichannel.api",
           "Port": 80
         }
       ],

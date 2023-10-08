@@ -1,12 +1,11 @@
-﻿namespace nh.qhatu.payment.domain.entities
+﻿namespace nh.qhatu.payment.application.dto
 {
-    public partial class Payment
+    public class PaymentDto
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString("N");
+        public string Id { get; set; } = null!;
         public string CustomerId { get; set; } = null!;
         public string OrderId { get; set; } = null!;
         public decimal Total { get; set; }
-        public int State { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

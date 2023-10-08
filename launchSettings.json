@@ -9,7 +9,8 @@
         "nh.qhatu.customer.api": "StartWithoutDebugging",
         "nh.qhatu.homedelivery.api": "StartWithoutDebugging",
         "nh.qhatu.api.gateway": "StartWithoutDebugging",
-        "nh.qhatu.security.api": "StartWithoutDebugging"
+        "nh.qhatu.security.api": "StartWithoutDebugging",
+        "nh.qhatu.payment.api": "StartDebugging"
       }
     }
   }

@@ -6,7 +6,7 @@
     <ProjectGuid>fbf8715e-312f-4b45-bd22-249898494e69</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>nh.qhatu.omnichannel.presentation.api</DockerServiceName>
+    <DockerServiceName>nh.qhatu.omnichannel.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

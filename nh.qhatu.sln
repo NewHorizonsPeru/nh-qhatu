@@ -129,7 +129,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AEEFB1EA-0BFE-4A5F-AC9B-FEC90267683C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.application", "..\nh.qhatu.payment.application\nh.qhatu.payment.application.csproj", "{ABDE8584-5553-4E8C-93BD-05B2074D7160}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.application", "nh.qhatu.payment.application\nh.qhatu.payment.application.csproj", "{ABDE8584-5553-4E8C-93BD-05B2074D7160}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.domain", "nh.qhatu.payment.domain\nh.qhatu.payment.domain.csproj", "{643519C3-0051-4581-AEEF-79E84B3B99BC}"
 EndProject

@@ -31,10 +31,16 @@ services:
     build:
       context: .
       dockerfile: nh.qhatu.security.api/Dockerfile
+  nh.qhatu.payment.api:
+    image: ${DOCKER_REGISTRY-}nhqhatupaymentapi
+    build:
+      context: .
+      dockerfile: nh.qhatu.payment.api/Dockerfile
 networks:
   default:
     external:
       name: qhatu-network
+
 
 
 

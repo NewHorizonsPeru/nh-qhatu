@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -22,8 +24,8 @@
   </ItemGroup>
 	
   <ItemGroup>
-    <ProjectReference Include="..\..\nh.qhatu.payment.application\nh.qhatu.payment.application.csproj" />
     <ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />
+    <ProjectReference Include="..\nh.qhatu.payment.application\nh.qhatu.payment.application.csproj" />
     <ProjectReference Include="..\nh.qhatu.payment.infrastructure\nh.qhatu.payment.infrastructure.csproj" />
   </ItemGroup>
 

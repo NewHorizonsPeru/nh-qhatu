@@ -20,6 +20,10 @@ namespace nh.qhatu.payment.infrastructure.configurations.entityTypes
 
             builder.Property(e => e.CustomerId).HasColumnName("customer_id");
 
+            builder.Property(e => e.OrderId)
+                .HasColumnType("varchar(250)")
+                .HasColumnName("order_id");
+
             builder.Property(e => e.Total)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("total");

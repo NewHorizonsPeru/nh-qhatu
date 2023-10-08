@@ -45,6 +45,13 @@ namespace nh.qhatu.security.application.services
 
         public void SignUp(CreateUserDto userDto)
         {
+            var random = new Random();
+            var value = random.Next(0, 2);
+            if (value == 0)
+            {
+                throw new Exception("Random Timeout");
+            }
+
             var currentUser = GetUserByUsername(userDto.Username);
             if (currentUser is not null)
             {

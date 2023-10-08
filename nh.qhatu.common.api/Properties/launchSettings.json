@@ -1,11 +1,11 @@
 {
   "profiles": {
-    "nh.qhatu.common.presentation.api": {
+    "nh.qhatu.common.api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "dev"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5215"
@@ -15,7 +15,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "dev"
       }
     },
     "Docker": {

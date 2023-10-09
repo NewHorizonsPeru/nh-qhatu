@@ -3,9 +3,7 @@
     public class CreateOrderDto
     {
         public string CustomerId { get; set; } = null!;
-        public string PaymentId { get; set; } = null!;
-        public int State { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public int State { get; set; } 
         public decimal Total { get; set; }
 
         public virtual ICollection<CreateOrderDetailDto> OrderDetails { get; set; } = null!;

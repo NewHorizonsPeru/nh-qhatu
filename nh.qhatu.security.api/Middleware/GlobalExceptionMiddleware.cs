@@ -39,8 +39,8 @@ namespace nh.qhatu.security.api.Middleware
             switch(currentException)
             {
                 case BusinessException ex:
-                    exceptionResponseModel.StatusCode = (int)HttpStatusCode.BadRequest;
-                    httpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                    exceptionResponseModel.StatusCode = (int)HttpStatusCode.OK;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
                     exceptionResponseModel.Message = ex.Message;
                     exceptionResponseModel.StackTrace = string.Empty;
                     break;
@@ -48,17 +48,18 @@ namespace nh.qhatu.security.api.Middleware
                     exceptionResponseModel.StatusCode = (int)HttpStatusCode.NotFound;
                     httpContext.Response.StatusCode = (int)HttpStatusCode.NotFound;
                     exceptionResponseModel.Message = ex.Message;
-                    exceptionResponseModel.StackTrace = ex.StackTrace ?? string.Empty;
+                    exceptionResponseModel.StackTrace = string.Empty;
                     break;
                 default:
                     exceptionResponseModel.StatusCode = (int)HttpStatusCode.InternalServerError;
                     httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                    exceptionResponseModel.Message = "Error interno, vuelva a intentar en unos minutos.";
-                    exceptionResponseModel.StackTrace = currentException.StackTrace ?? string.Empty;
+                    exceptionResponseModel.Message = "Ocurrió un error interno, vuelva a intentar en unos minutos.";
+                    exceptionResponseModel.StackTrace = string.Empty;
                     break;
             }
 
             var jsonResult = JsonSerializer.Serialize(exceptionResponseModel);
+
             await httpContext.Response.WriteAsJsonAsync(jsonResult);
         }
     }

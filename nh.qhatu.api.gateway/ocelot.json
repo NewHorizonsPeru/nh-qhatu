@@ -98,7 +98,10 @@
         }
       ],
       "UpstreamPathTemplate": "/qhatu/api/payment/{everything_else}",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
     }
   ],
   "GlobalConfiguration": {

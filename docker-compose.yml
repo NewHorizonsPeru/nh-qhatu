@@ -1,5 +1,4 @@
 version: '3.4'
-
 services:
   nh.qhatu.omnichannel.api:
     image: ${DOCKER_REGISTRY-}nhqhatuomnichannelapi

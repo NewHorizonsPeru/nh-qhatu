@@ -1,5 +1,4 @@
 version: '3.4'
-
 services:
   nh.qhatu.common.api:
     environment:
@@ -36,4 +35,3 @@ services:
       - ASPNETCORE_ENVIRONMENT=dev
     ports:
       - "9206:80"
-

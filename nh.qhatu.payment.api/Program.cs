@@ -1,6 +1,10 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using nh.qhatu.domain.bus;
 using nh.qhatu.infrastructure.bus.settings;
 using nh.qhatu.infrastructure.ioc;
+using nh.qhatu.payment.application.eventHandlers;
+using nh.qhatu.payment.application.events;
 using nh.qhatu.payment.application.interfaces;
 using nh.qhatu.payment.application.mappings;
 using nh.qhatu.payment.application.services;
@@ -46,6 +50,12 @@ builder.Services.AddTransient<IPaymentRepository, PaymentRepository>();
 //Context
 builder.Services.AddTransient<PaymentContext>();
 
+//Commands & Events
+builder.Services.AddTransient<IEventHandler<CreatePaymentEvent>, CreatePaymentEventHandler>();
+
+//Subscriptions
+builder.Services.AddTransient<CreatePaymentEventHandler>();
+
 //CORS
 builder.Services.AddCors(opt =>
 {
@@ -56,6 +66,10 @@ builder.Services.AddCors(opt =>
 builder.Services.AddDiscoveryClient();
 
 var app = builder.Build();
+
+//Subscriptions
+var eventBus = app.Services.GetRequiredService<IEventBus>();
+eventBus.Subscribe<CreatePaymentEvent, CreatePaymentEventHandler>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsProduction())

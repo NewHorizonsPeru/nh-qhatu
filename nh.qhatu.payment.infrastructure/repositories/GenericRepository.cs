@@ -132,15 +132,15 @@ namespace nh.qhatu.payment.infrastructure.repositories
             return _context.Set<T>().AsQueryable<T>();
         }
 
-        public virtual void Save()
+        public virtual bool Save()
         {
             try
             {
-                _context.SaveChanges();
+               return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
             {
-
+                return false;
             }
 
         }

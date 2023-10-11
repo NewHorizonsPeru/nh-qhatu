@@ -4,6 +4,6 @@ namespace nh.qhatu.payment.application.interfaces
 {
     public interface IPaymentService
     {
-        void CreatePayment(CreatePaymentDto createPaymentDto);
+        bool CreatePayment(CreatePaymentDto createPaymentDto);
     }
 }

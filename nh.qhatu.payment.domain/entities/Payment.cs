@@ -7,6 +7,6 @@
         public string OrderId { get; set; } = null!;
         public decimal Total { get; set; }
         public int State { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

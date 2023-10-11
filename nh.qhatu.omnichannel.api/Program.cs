@@ -1,6 +1,9 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using nh.qhatu.infrastructure.bus.settings;
 using nh.qhatu.infrastructure.ioc;
+using nh.qhatu.omnichannel.application.commandHandlers;
+using nh.qhatu.omnichannel.application.commands;
 using nh.qhatu.omnichannel.application.interfaces;
 using nh.qhatu.omnichannel.application.mappings;
 using nh.qhatu.omnichannel.application.services;
@@ -44,6 +47,9 @@ builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 
 //Context
 builder.Services.AddTransient<OmnichannelContext>();
+
+//Commands & Events
+builder.Services.AddTransient<IRequestHandler<CreatePaymentCommand, bool>, CreatePaymentCommandHandler>();
 
 //CORS
 builder.Services.AddCors(opt =>

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using nh.qhatu.domain.bus;
+using nh.qhatu.omnichannel.application.commands;
 using nh.qhatu.omnichannel.application.dto;
 using nh.qhatu.omnichannel.application.dto.Creates;
 using nh.qhatu.omnichannel.application.interfaces;
@@ -10,11 +12,13 @@ namespace nh.qhatu.omnichannel.application.services
     public class OrderService : IOrderService
     {
         private readonly IMapper _mapper;
+        private readonly IEventBus _eventBus;
         private readonly IOrderRepository _orderRepository;
 
-        public OrderService(IMapper mapper, IOrderRepository orderRepository)
+        public OrderService(IMapper mapper, IEventBus eventBus, IOrderRepository orderRepository)
         {
             _mapper = mapper;
+            _eventBus = eventBus;
             _orderRepository = orderRepository;
         }
 
@@ -25,12 +29,19 @@ namespace nh.qhatu.omnichannel.application.services
             return ordersDto;
         }
 
-        public void CreateOrder(CreateOrderDto orderDto) 
+        public async Task<bool> CreateOrder(CreateOrderDto orderDto) 
         {
             var order = _mapper.Map<Order>(orderDto);
-            var orderDetail = order.OrderDetails;           
             _orderRepository.Add(order);
-            _orderRepository.Save();           
+
+            var successRegister = _orderRepository.Save();
+
+            if (successRegister)
+            {
+                await _eventBus.SendCommand(new CreatePaymentCommand(order.Id, order.CustomerId, order.Total));
+            }
+
+            return successRegister;
         }
     }
 }

@@ -6,6 +6,6 @@ namespace nh.qhatu.omnichannel.application.interfaces
     public interface IOrderService
     {
         ICollection<OrderDto> GetAllOrders();
-        void CreateOrder(CreateOrderDto orderDto);
+        Task<bool> CreateOrder(CreateOrderDto orderDto);
     }
 }

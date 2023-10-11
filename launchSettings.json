@@ -13,7 +13,7 @@
         "nh.qhatu.homedelivery.api": "DoNotStart",
         "nh.qhatu.api.gateway": "StartDebugging",
         "nh.qhatu.security.api": "StartDebugging",
-        "nh.qhatu.payment.api": "DoNotStart"
+        "nh.qhatu.payment.api": "StartDebugging"
       }
     }
   }

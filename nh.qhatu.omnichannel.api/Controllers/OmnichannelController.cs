@@ -23,10 +23,10 @@ namespace nh.qhatu.omnichannel.api.Controllers
         }
 
         [HttpPost("createOrder")]
-        public IActionResult CreateOrder(CreateOrderDto orderDto) 
+        public async Task<IActionResult> CreateOrder(CreateOrderDto orderDto) 
         {
-            _orderService.CreateOrder(orderDto);
-            return Ok();
+            var response = await _orderService.CreateOrder(orderDto);
+            return Ok(response);
         }
     }
 }

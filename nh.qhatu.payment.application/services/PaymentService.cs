@@ -17,11 +17,11 @@ namespace nh.qhatu.payment.application.services
             _paymentRepository = paymentRepository;
         }
 
-        public void CreatePayment(CreatePaymentDto createPaymentDto)
+        public bool CreatePayment(CreatePaymentDto createPaymentDto)
         {
             var payment = _mapper.Map<Payment>(createPaymentDto);
             _paymentRepository.Add(payment);
-            _paymentRepository.Save();
+            return _paymentRepository.Save();
         }
     }
 }

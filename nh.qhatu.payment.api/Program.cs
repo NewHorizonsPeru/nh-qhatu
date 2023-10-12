@@ -1,17 +1,14 @@
-using MediatR;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using nh.qhatu.domain.bus;
-using nh.qhatu.infrastructure.bus.settings;
+using nh.qhatu.infrasctructure.crosscutting;
 using nh.qhatu.infrastructure.ioc;
 using nh.qhatu.payment.application.eventHandlers;
-using nh.qhatu.payment.application.events;
 using nh.qhatu.payment.application.interfaces;
 using nh.qhatu.payment.application.mappings;
 using nh.qhatu.payment.application.services;
 using nh.qhatu.payment.domain.interfaces;
 using nh.qhatu.payment.infrastructure.context;
 using nh.qhatu.payment.infrastructure.repositories;
-using Steeltoe.Common.Contexts;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
 
@@ -35,11 +32,24 @@ builder.Services.AddDbContext<PaymentContext>(config =>
     config.UseMySQL(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
 
-//RabbitMQ Settings
-builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("rabbitMqSettings"));
-
 //IoC
 builder.Services.RegisterServices(builder.Configuration);
+
+builder.Services.AddMassTransit(mt =>
+    mt.UsingRabbitMq((cntxt, cfg) =>
+    {
+        cfg.Host(builder.Configuration["rabbitMqSettings:hostName"], "/", c =>
+        {
+            c.Username(builder.Configuration["rabbitMqSettings:username"]);
+            c.Password(builder.Configuration["rabbitMqSettings:password"]);
+        });
+
+        cfg.ReceiveEndpoint(nameof(CreatePaymentEvent), (c) =>
+        {
+            c.Consumer<CreatePaymentEventHandler>(cntxt);
+        });
+    })
+);
 
 //Services
 builder.Services.AddTransient<IPaymentService, PaymentService>();
@@ -49,9 +59,6 @@ builder.Services.AddTransient<IPaymentRepository, PaymentRepository>();
 
 //Context
 builder.Services.AddTransient<PaymentContext>();
-
-//Commands & Events
-builder.Services.AddTransient<IEventHandler<CreatePaymentEvent>, CreatePaymentEventHandler>();
 
 //Subscriptions
 builder.Services.AddTransient<CreatePaymentEventHandler>();
@@ -66,10 +73,6 @@ builder.Services.AddCors(opt =>
 builder.Services.AddDiscoveryClient();
 
 var app = builder.Build();
-
-//Subscriptions
-var eventBus = app.Services.GetRequiredService<IEventBus>();
-eventBus.Subscribe<CreatePaymentEvent, CreatePaymentEventHandler>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsProduction())

@@ -10,8 +10,4 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
 	</ItemGroup>
-	<ItemGroup>
-	  <ProjectReference Include="..\nh.qhatu.domain\nh.qhatu.domain.csproj" />
-	  <ProjectReference Include="..\nh.qhatu.infrastructure.bus\nh.qhatu.infrastructure.bus.csproj" />
-	</ItemGroup>
 </Project>

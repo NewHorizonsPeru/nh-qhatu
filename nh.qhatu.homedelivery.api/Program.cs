@@ -5,7 +5,6 @@ using nh.qhatu.homedelivery.application.services;
 using nh.qhatu.homedelivery.domain.interfaces;
 using nh.qhatu.homedelivery.infrastructure.context;
 using nh.qhatu.homedelivery.infrastructure.repositories;
-using nh.qhatu.infrastructure.bus.settings;
 using nh.qhatu.infrastructure.ioc;
 using Steeltoe.Discovery.Client;
 using Steeltoe.Extensions.Configuration.ConfigServer;
@@ -29,9 +28,6 @@ builder.Services.AddDbContext<HomeDeliveryContext>(config =>
 {
     config.UseNpgsql(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
-
-//RabbitMQ Settings
-builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMqSettings"));
 
 //IoC
 builder.Services.RegisterServices(builder.Configuration);

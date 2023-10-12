@@ -1,28 +1,26 @@
-﻿using nh.qhatu.domain.bus;
+﻿using MassTransit;
+using nh.qhatu.infrasctructure.crosscutting;
 using nh.qhatu.payment.application.dto.Creates;
-using nh.qhatu.payment.application.events;
 using nh.qhatu.payment.application.interfaces;
 
 namespace nh.qhatu.payment.application.eventHandlers
 {
-    public class CreatePaymentEventHandler : IEventHandler<CreatePaymentEvent>
+    public class CreatePaymentEventHandler : IConsumer<CreatePaymentEvent>
     {
-        private readonly IEventBus _eventBus;
         private readonly IPaymentService _paymentService;
 
-        public CreatePaymentEventHandler(IEventBus eventBus, IPaymentService paymentService) 
+        public CreatePaymentEventHandler(IPaymentService paymentService)
         {
-            _eventBus = eventBus;
             _paymentService = paymentService;
         }
-        
-        public Task Handle(CreatePaymentEvent @event)
+
+        public Task Consume(ConsumeContext<CreatePaymentEvent> context)
         {
             var paymentDto = new CreatePaymentDto
             {
-                OrderId = @event.OrderId,
-                CustomerId = @event.CustomerId,
-                Total = @event.Total,
+                OrderId = context.Message.OrderId,
+                CustomerId = context.Message.CustomerId,
+                Total = context.Message.Total,
             };
 
             var successPayment = _paymentService.CreatePayment(paymentDto);

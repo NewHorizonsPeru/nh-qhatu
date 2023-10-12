@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using nh.qhatu.domain.bus;
-using nh.qhatu.omnichannel.application.commands;
+using MassTransit;
+using nh.qhatu.infrasctructure.crosscutting;
 using nh.qhatu.omnichannel.application.dto;
-using nh.qhatu.omnichannel.application.dto.Creates;
+using nh.qhatu.omnichannel.application.dto.creates;
 using nh.qhatu.omnichannel.application.interfaces;
 using nh.qhatu.omnichannel.domain.entities;
 using nh.qhatu.omnichannel.domain.interfaces;
@@ -12,13 +12,13 @@ namespace nh.qhatu.omnichannel.application.services
     public class OrderService : IOrderService
     {
         private readonly IMapper _mapper;
-        private readonly IEventBus _eventBus;
+        private readonly IPublishEndpoint _publishEndPoint;
         private readonly IOrderRepository _orderRepository;
 
-        public OrderService(IMapper mapper, IEventBus eventBus, IOrderRepository orderRepository)
+        public OrderService(IMapper mapper, IPublishEndpoint publishEndPoint, IOrderRepository orderRepository)
         {
             _mapper = mapper;
-            _eventBus = eventBus;
+            _publishEndPoint = publishEndPoint;
             _orderRepository = orderRepository;
         }
 
@@ -38,7 +38,7 @@ namespace nh.qhatu.omnichannel.application.services
 
             if (successRegister)
             {
-                await _eventBus.SendCommand(new CreatePaymentCommand(order.Id, order.CustomerId, order.Total));
+                await _publishEndPoint.Publish(new CreatePaymentEvent(order.Id, order.CustomerId, order.Total));
             }
 
             return successRegister;

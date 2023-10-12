@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{13DA33CC-0934-473F-A82B-51348994209B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{419A9D09-6540-48F7-B97C-432591B0FADD}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.domain", "nh.qhatu.domain\nh.qhatu.domain.csproj", "{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.infrastructure.bus", "nh.qhatu.infrastructure.bus\nh.qhatu.infrastructure.bus.csproj", "{4AA735C1-A50D-4344-8B77-F081D06BBDC8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{F08FA4DA-084C-48F2-BCAA-67BD01790495}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{EFA9F074-CDAE-4BDD-85B6-61A259A45B65}"
 EndProject
@@ -129,13 +121,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AEEFB1EA-0BFE-4A5F-AC9B-FEC90267683C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.application", "nh.qhatu.payment.application\nh.qhatu.payment.application.csproj", "{ABDE8584-5553-4E8C-93BD-05B2074D7160}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.payment.application", "nh.qhatu.payment.application\nh.qhatu.payment.application.csproj", "{ABDE8584-5553-4E8C-93BD-05B2074D7160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.domain", "nh.qhatu.payment.domain\nh.qhatu.payment.domain.csproj", "{643519C3-0051-4581-AEEF-79E84B3B99BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.payment.domain", "nh.qhatu.payment.domain\nh.qhatu.payment.domain.csproj", "{643519C3-0051-4581-AEEF-79E84B3B99BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.infrastructure", "nh.qhatu.payment.infrastructure\nh.qhatu.payment.infrastructure.csproj", "{419B9622-C909-466B-8EF1-024455C278AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.payment.infrastructure", "nh.qhatu.payment.infrastructure\nh.qhatu.payment.infrastructure.csproj", "{419B9622-C909-466B-8EF1-024455C278AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nh.qhatu.payment.api", "nh.qhatu.payment.api\nh.qhatu.payment.api.csproj", "{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nh.qhatu.payment.api", "nh.qhatu.payment.api\nh.qhatu.payment.api.csproj", "{F8FD2AB3-0638-4CF2-8F52-2D6968ED9AFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,14 +135,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AA735C1-A50D-4344-8B77-F081D06BBDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AA735C1-A50D-4344-8B77-F081D06BBDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AA735C1-A50D-4344-8B77-F081D06BBDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AA735C1-A50D-4344-8B77-F081D06BBDC8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11268005-D47F-4FA7-B7B4-2C8C23BD0B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11268005-D47F-4FA7-B7B4-2C8C23BD0B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11268005-D47F-4FA7-B7B4-2C8C23BD0B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -268,9 +252,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1B7E6DB6-290D-4EB2-94C6-D302A51AA47D} = {13DA33CC-0934-473F-A82B-51348994209B}
-		{4AA735C1-A50D-4344-8B77-F081D06BBDC8} = {F08FA4DA-084C-48F2-BCAA-67BD01790495}
-		{F08FA4DA-084C-48F2-BCAA-67BD01790495} = {419A9D09-6540-48F7-B97C-432591B0FADD}
 		{EFA9F074-CDAE-4BDD-85B6-61A259A45B65} = {419A9D09-6540-48F7-B97C-432591B0FADD}
 		{11268005-D47F-4FA7-B7B4-2C8C23BD0B21} = {EFA9F074-CDAE-4BDD-85B6-61A259A45B65}
 		{4ADFB5B3-CB1C-43D3-A51F-973DAD99923B} = {2D37710E-4C5B-4C74-A3E7-BF9FE1D6C4D2}

@@ -17,11 +17,9 @@
 		<PackageReference Include="Steeltoe.Extensions.Configuration.ConfigServerCore" Version="3.2.4" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 		<PackageReference Include="Steeltoe.Discovery.Consul" Version="3.2.4" />
+		<PackageReference Include="MassTransit" Version="8.0.3" />
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.0.3" />
 	</ItemGroup>
-	
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
 	
   <ItemGroup>
     <ProjectReference Include="..\nh.qhatu.infrastructure.ioc\nh.qhatu.infrastructure.ioc.csproj" />

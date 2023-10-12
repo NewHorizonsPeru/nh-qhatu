@@ -1,9 +1,6 @@
-using MediatR;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using nh.qhatu.infrastructure.bus.settings;
 using nh.qhatu.infrastructure.ioc;
-using nh.qhatu.omnichannel.application.commandHandlers;
-using nh.qhatu.omnichannel.application.commands;
 using nh.qhatu.omnichannel.application.interfaces;
 using nh.qhatu.omnichannel.application.mappings;
 using nh.qhatu.omnichannel.application.services;
@@ -33,11 +30,19 @@ builder.Services.AddDbContext<OmnichannelContext>(config =>
     config.UseMySQL(builder.Configuration.GetValue<string>("connectionStrings:qhatuConnection"));
 });
 
-//RabbitMQ Settings
-builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("rabbitMqSettings"));
-
 //IoC
 builder.Services.RegisterServices(builder.Configuration);
+
+builder.Services.AddMassTransit(mt =>
+    mt.UsingRabbitMq((cntxt, cfg) =>
+    {
+        cfg.Host(builder.Configuration["rabbitMqSettings:hostName"], "/", c =>
+        {
+            c.Username(builder.Configuration["rabbitMqSettings:username"]);
+            c.Password(builder.Configuration["rabbitMqSettings:password"]);
+        });
+    })
+);
 
 //Services
 builder.Services.AddTransient<IOrderService, OrderService>();
@@ -47,9 +52,6 @@ builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 
 //Context
 builder.Services.AddTransient<OmnichannelContext>();
-
-//Commands & Events
-builder.Services.AddTransient<IRequestHandler<CreatePaymentCommand, bool>, CreatePaymentCommandHandler>();
 
 //CORS
 builder.Services.AddCors(opt =>

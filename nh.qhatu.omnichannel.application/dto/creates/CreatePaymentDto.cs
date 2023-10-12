@@ -1,8 +1,6 @@
-﻿using nh.qhatu.domain.commands;
-
-namespace nh.qhatu.omnichannel.application.commands
+﻿namespace nh.qhatu.omnichannel.application.dto.creates
 {
-    public class PaymentCommand : Command
+    public class CreatePaymentDto
     {
         public string OrderId { get; set; } = null!;
         public string CustomerId { get; set; } = null!;

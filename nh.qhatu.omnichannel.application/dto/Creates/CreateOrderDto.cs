@@ -1,4 +1,4 @@
-﻿namespace nh.qhatu.omnichannel.application.dto.Creates
+﻿namespace nh.qhatu.omnichannel.application.dto.creates
 {
     public class CreateOrderDto
     {
